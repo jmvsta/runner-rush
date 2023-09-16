@@ -5,70 +5,71 @@ using UnityEngine;
 public class RoadGenerator : MonoBehaviour
 {
     public GameObject RoadPrefab;
-    private List<GameObject> roads = new List<GameObject>();
+    private List<GameObject> _roads = new List<GameObject>();
     public float MaxSpeed = 10;
-    private float speed = 0;
-    public int MaxRoadCount = 5;
+    private float _speed = 0;
+    public int MaxRoadCount = 10;
 
     // Start is called before the first frame update
     void Start()
     {
         ResetLevel();
-        StartLevel();
     }
 
     public void StartLevel()
     {
-        speed = MaxSpeed;
+        _speed = MaxSpeed;
+        SwipeManager.instance.enabled = true;
     }
 
     public void CreateNextRoad()
     {
-        Vector3 pos = Vector3.zero;
+        Vector3 _pos = Vector3.zero;
 
-        if (roads.Count > 0)
+        if (_roads.Count > 0)
         {
-            pos = roads[roads.Count - 1].transform.position + new Vector3(0, 0, 15);
+            _pos = _roads[_roads.Count - 1].transform.position + new Vector3(0, 0, 30);
         }
 
-        GameObject newRoad = Instantiate(RoadPrefab, pos, Quaternion.identity);
+        GameObject newRoad = Instantiate(RoadPrefab, _pos, Quaternion.identity);
         newRoad.transform.SetParent(transform);
-        roads.Add(newRoad);
+        _roads.Add(newRoad);
     }
 
     public void ResetLevel()
     {
-        speed = 0;
+        _speed = 0;
 
-        while (roads.Count > 0)
+        while (_roads.Count > 0)
         {
-            Destroy(roads[0]);
-            roads.RemoveAt(0);
+            Destroy(_roads[0]);
+            _roads.RemoveAt(0);
         }
 
         for (int i = 0; i < MaxRoadCount; i++)
         {
             CreateNextRoad();
         }
+
+        SwipeManager.instance.enabled = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
-        if (speed == 0)
+        if (_speed == 0)
         {
             return;
         }
 
-        foreach (GameObject road in roads)
+        foreach (GameObject road in _roads)
         {
-            road.transform.position -= new Vector3(0, 0, speed * Time.deltaTime);
+            road.transform.position -= new Vector3(0, 0, _speed * Time.deltaTime);
         }
 
-        if (roads[0].transform.position.z < -15)
+        if (_roads[0].transform.position.z < -30)
         {
-            Destroy(roads[0]);
-            roads.RemoveAt(0);
+            Destroy(_roads[0]);
+            _roads.RemoveAt(0);
 
             CreateNextRoad();
         }
