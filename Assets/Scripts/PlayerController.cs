@@ -1,45 +1,77 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private Vector3 _targetPos;
-    private float _laneOffset = 4f;
-    private float _laneChangeSpeed = 15;
-    private float _timeElapsed;
-    private float _lerpDuration = 0.5f;
-
+    [SerializeField] private float _jumpForce;
+    [SerializeField] private float _gravity;
+    [SerializeField] private float _lineDistanse = 3;
+    private CharacterController _characterController;
+    [SerializeField]  private RoadSpawner _generator;
+    private Vector3 _dir;
+    private int _lineToMove = 1;
+    
     void Start()
     {
-       _targetPos = transform.position;
+        _characterController = GetComponent<CharacterController>();
     }
 
-    void Update()
+    private void Update()
     {
-        if ((Input.GetKeyDown(KeyCode.LeftArrow) || Input.GetKeyDown(KeyCode.A)) && _targetPos.x > -_laneOffset)
+        if (SwipeController.SwipeRight)
         {
-            _timeElapsed = 0;
-            _targetPos = new Vector3(_targetPos.x - _laneOffset, transform.position.y, transform.position.z);
+            if (_lineToMove < 2)
+            {
+                _lineToMove++;
+            }
         }
 
-        if ((Input.GetKeyDown(KeyCode.RightArrow) || Input.GetKeyDown(KeyCode.D)) && _targetPos.x < _laneOffset)
+        if (SwipeController.SwipeLeft)
         {
-            _timeElapsed = 0;
-            _targetPos = new Vector3(_targetPos.x + _laneOffset, transform.position.y, transform.position.z);
+            if (_lineToMove > 0)
+            {
+                _lineToMove--;
+            }
         }
+
+        if (SwipeController.SwipeUp)
+        {
+            if (_characterController.isGrounded)
+            {
+                Jump();
+            }
+        }
+
+        Vector3 _targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
+        if (_lineToMove == 0)
+        {
+            _targetPosition += Vector3.left * _lineDistanse;
+        }
+        else if (_lineToMove == 2)
+        {
+            _targetPosition += Vector3.right * _lineDistanse;
+        }
+
+        transform.position = _targetPosition;
     }
 
-    private void FixedUpdate()
+    void FixedUpdate()
     {
-        if (_timeElapsed < _lerpDuration)
-        {
-            transform.position = Vector3.Lerp(transform.position, _targetPos, _timeElapsed / _lerpDuration);
-            _timeElapsed += Time.deltaTime;
-        }
-        else
-        {
-            transform.position = _targetPos;
-        }
+    //    _dir.z = _speed;
+        _dir.y += _gravity * Time.fixedDeltaTime;
+        _characterController.Move(_dir * Time.fixedDeltaTime);
+    }
+
+    private void Jump()
+    {
+        _dir.y = _jumpForce;
+    }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        _generator.SpawnRoad();
+        _generator.DeleteRoad();
     }
 }
