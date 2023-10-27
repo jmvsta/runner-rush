@@ -5,16 +5,19 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
+    [SerializeField] private GameObject _losePanel;
+    [SerializeField] private RoadSpawner _generator;
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _gravity;
     [SerializeField] private float _lineDistanse = 3;
     private CharacterController _characterController;
-    [SerializeField]  private RoadSpawner _generator;
     private Vector3 _dir;
     private int _lineToMove = 1;
     
     void Start()
     {
+        _losePanel.SetActive(false);
+        Time.timeScale = 1;
         _characterController = GetComponent<CharacterController>();
     }
 
@@ -54,7 +57,21 @@ public class PlayerController : MonoBehaviour
             _targetPosition += Vector3.right * _lineDistanse;
         }
 
-        transform.position = _targetPosition;
+        if (transform.position == _targetPosition)
+        {
+            return;
+        }
+
+        Vector3 _dif = _targetPosition - transform.position;
+        Vector3 _moveDir = _dif.normalized * 25 * Time.deltaTime;
+        if (_moveDir.sqrMagnitude > _dif.sqrMagnitude)
+        {
+            _characterController.Move(_moveDir);
+        }
+        else
+        {
+            _characterController.Move(_dif);
+        }
     }
 
     void FixedUpdate()
@@ -71,7 +88,16 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        _generator.SpawnRoad();
-        _generator.DeleteRoad();
+        if (other.gameObject.tag == "Respawn")
+        {
+            _generator.SpawnRoad();
+            _generator.DeleteRoad();
+        }
+
+        if (other.gameObject.tag == "Died")
+        {
+            _losePanel.SetActive(true);
+            Time.timeScale = 0;
+        }
     }
 }

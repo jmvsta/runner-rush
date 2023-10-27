@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class MoveRoad : MonoBehaviour
 {
-    [SerializeField] private RoadSpawner _roadSpawner;
+    private RoadSpawner _roadSpawner;
     [SerializeField] private float Speed = 10;
 
     private void FixedUpdate()

@@ -12,7 +12,7 @@ public class RoadSpawner : MonoBehaviour
     private float _roadLenght = 100;
     private int _startRoad = 5;
 
-    public float Speed { get { return _speed; } private set { } }
+    public float Speed {get { return _speed; } private set { Speed = _speed; } }
 
 
     void Start()
@@ -28,7 +28,7 @@ public class RoadSpawner : MonoBehaviour
 
     public void SpawnRoad()
     {
-        GameObject _nextRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length - 1)], transform.forward * _spawnPos, Quaternion.identity);
+        GameObject _nextRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)], transform.forward * _spawnPos, Quaternion.identity);
         _activeRoad.Add(_nextRoad);
     }
 
