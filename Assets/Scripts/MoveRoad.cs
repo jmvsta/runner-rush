@@ -4,16 +4,13 @@ using UnityEngine;
 
 public class MoveRoad : MonoBehaviour
 {
-    private RoadSpawner _roadSpawner;
-    [SerializeField] private float Speed = 10;
-
     private void FixedUpdate()
     {
-        MovedRoad();
+        MovedRoad(GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>().Speed);
     }
 
-    private void MovedRoad()
+    private void MovedRoad(float speed)
     {
-        transform.Translate(-transform.forward * Speed * Time.deltaTime);
+        transform.Translate(-transform.forward * speed * Time.deltaTime);
     }
 }
