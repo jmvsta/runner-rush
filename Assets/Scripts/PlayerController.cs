@@ -2,14 +2,17 @@ using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject _losePanel;
     [SerializeField] private RoadSpawner _generator;
+    [SerializeField] private Text _coinsText;
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _gravity;
     [SerializeField] private float _lineDistanse = 3;
+    [SerializeField] private int _coins;
     private CharacterController _characterController;
     private Vector3 _dir;
     private int _lineToMove = 1;
@@ -98,6 +101,13 @@ public class PlayerController : MonoBehaviour
         {
             _losePanel.SetActive(true);
             Time.timeScale = 0;
+        }
+
+        if (other.gameObject.tag == "Coin")
+        {
+            _coins++;
+            _coinsText.text = _coins.ToString();
+            Destroy(other.gameObject);
         }
     }
 }

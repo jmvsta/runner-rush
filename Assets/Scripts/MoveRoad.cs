@@ -6,7 +6,7 @@ public class MoveRoad : MonoBehaviour
 {
     private void FixedUpdate()
     {
-        MovedRoad(GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>().Speed);
+       MovedRoad(GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>().Speed);
     }
 
     private void MovedRoad(float speed)
