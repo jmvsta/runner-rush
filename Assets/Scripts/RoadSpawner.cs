@@ -1,40 +1,55 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class RoadSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _roadPrefabs;
-    [SerializeField] private GameObject _spawnObj;
-    [SerializeField] private float _spawnPos = 0;
+    [SerializeField] private float _spawnPos;
     [SerializeField] private float _speed = 10;
-    private List<GameObject> _activeRoad = new List<GameObject>();
-    private float _roadLenght = 100;
-    private int _startRoad = 5;
+    private readonly List<GameObject> _activeRoads = new();
+    private readonly List<GameObject> _noneActiveRoad = new();
+    private const float RoadLength = 100;
+    private const int InitRoads = 3;
+    private const int MaxRoads = 10;
 
-    public float Speed {get { return _speed; } private set { Speed = _speed; } }
-
-
+    public float Speed => _speed;
+    
     void Start()
     {
-        for (int i = 0; i < _startRoad; i++)
+        for (var i = 0; i < MaxRoads; i++)
         {
-            SpawnRoad();
-            _spawnPos += _roadLenght;
+            if (i >= InitRoads)
+            {
+                var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
+                    new Vector3(0, 0, 0), Quaternion.identity);
+                initializedRoad.SetActive(false);
+                _noneActiveRoad.Add(initializedRoad);
+            }
+            else
+            {
+                var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
+                    transform.forward * _spawnPos, Quaternion.identity);
+                initializedRoad.SetActive(true);
+                _spawnPos += RoadLength;
+                _activeRoads.Add(initializedRoad);
+            }
         }
-
-        _spawnPos = _spawnObj.transform.position.z;
     }
 
-    public void SpawnRoad()
+    public void DeactivateRoad(GameObject road)
     {
-        GameObject _nextRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)], transform.forward * _spawnPos, Quaternion.identity);
-        _activeRoad.Add(_nextRoad);
+        _activeRoads.Remove(road);
+        road.transform.position = new Vector3(0, 0, 0);
+        road.SetActive(false);
+        _noneActiveRoad.Add(road);
     }
 
-    public void DeleteRoad()
+    public void ActivateRoad()
     {
-        _activeRoad[0].SetActive(false);
-        _activeRoad.RemoveAt(0);
+        var roadToActivate = _noneActiveRoad[Random.Range(0, _noneActiveRoad.Count)];
+        _noneActiveRoad.Remove(roadToActivate);
+        roadToActivate.transform.position = new Vector3(0, 0, 200);
+        roadToActivate.SetActive(true);
+        _activeRoads.Add(roadToActivate);
     }
 }
