@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44657695, g: 0.49641138, b: 0.5748176, a: 1}
+  m_IndirectSpecularColor: {r: 0.44657755, g: 0.4964127, b: 0.57481825, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -863,7 +863,7 @@ Transform:
   m_GameObject: {fileID: 1302242191}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 400}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -906,10 +906,8 @@ MonoBehaviour:
   - {fileID: 3468544210397804168, guid: 08f536d7e13943f4297bb2a24ac78672, type: 3}
   - {fileID: 3468544210397804168, guid: a18d9d2e1e5f28a4dac4c110082c27ad, type: 3}
   - {fileID: 3468544210397804168, guid: dbae5a19f0e63454cb3dab5d0db14fd2, type: 3}
-  _spawnObj: {fileID: 1302242191}
-  _scoreText: {fileID: 1670773816}
-  _spawnPos: 0
-  _speed: 10
+  _spawnPos: 50
+  _speed: 50
 --- !u!1 &1670773814
 GameObject:
   m_ObjectHideFlags: 0
@@ -1150,7 +1148,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 206751594226466098, guid: 4acf40a1f6c07054b8f8933bebbd40f3, type: 3}
       propertyPath: _gravity
-      value: -20
+      value: -14
       objectReference: {fileID: 0}
     - target: {fileID: 206751594226466098, guid: 4acf40a1f6c07054b8f8933bebbd40f3, type: 3}
       propertyPath: _coinsText
@@ -1162,7 +1160,7 @@ PrefabInstance:
       objectReference: {fileID: 1302242194}
     - target: {fileID: 206751594226466098, guid: 4acf40a1f6c07054b8f8933bebbd40f3, type: 3}
       propertyPath: _jumpForce
-      value: 12
+      value: 11
       objectReference: {fileID: 0}
     - target: {fileID: 206751594226466098, guid: 4acf40a1f6c07054b8f8933bebbd40f3, type: 3}
       propertyPath: _losePanel

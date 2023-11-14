@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
@@ -12,6 +13,6 @@ public class Score : MonoBehaviour
     private void FixedUpdate()
     {
         _score += 1;
-        _scoreText.text = ((float)(_score)).ToString();
+        _scoreText.text = _score.ToString();
     }
 }
