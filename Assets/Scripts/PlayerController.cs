@@ -1,3 +1,6 @@
+using System;
+using System.Collections;
+using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -13,7 +16,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _characterController;
     private Vector3 _dir;
     private int _lineToMove = 1;
-
+    
     void Start()
     {
         _losePanel.SetActive(false);
@@ -88,19 +91,19 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.CompareTag("Respawn"))
+        if (other.gameObject.tag == "Respawn")
         {
-            _generator.DeactivateRoad(other.transform.parent.gameObject);
-            _generator.ActivateRoad();
+            _generator.SpawnRoad();
+            _generator.DeleteRoad();
         }
-    
-        if (other.gameObject.CompareTag("Died"))
+
+        if (other.gameObject.tag == "Died")
         {
             _losePanel.SetActive(true);
             Time.timeScale = 0;
         }
 
-        if (other.gameObject.CompareTag("Coin"))
+        if (other.gameObject.tag == "Coin")
         {
             _coins++;
             _coinsText.text = _coins.ToString();

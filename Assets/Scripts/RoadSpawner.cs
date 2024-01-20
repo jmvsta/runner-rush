@@ -1,5 +1,6 @@
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class RoadSpawner : MonoBehaviour
 {
@@ -20,7 +21,7 @@ public class RoadSpawner : MonoBehaviour
 
     void Start()
     {
-        for (var i = 0; i < MaxRoads; i++)
+        for (int i = 0; i < _startRoad; i++)
         {
             if (i == 0 || i == 1)
             {
@@ -31,18 +32,17 @@ public class RoadSpawner : MonoBehaviour
                 SpawnRoad();
             }
             _spawnPos += _roadLenght;
-
         }
+
+        _spawnPos = _spawnObj.transform.position.z;
     }
 
-    public void DeactivateRoad(GameObject road)
+    public void SpawnRoad()
     {
-        _activeRoads.Remove(road);
-        road.transform.position = new Vector3(0, 0, 0);
-        road.SetActive(false);
-        _noneActiveRoad.Add(road);
+        GameObject _nextRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)], transform.forward * _spawnPos, Quaternion.identity);
+        _activeRoad.Add(_nextRoad);
     }
-    
+
     public void SpawnRoad(int roadId)
     {
         GameObject _nextRoad = Instantiate(roadId == 1 ? _roadPrefab1 : _roadPrefab2, transform.forward * _spawnPos, Quaternion.identity);
