@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwipeController : MonoBehaviour
@@ -12,7 +10,7 @@ public class SwipeController : MonoBehaviour
     {
         Tap = SwipeDown = SwipeUp = SwipeLeft = SwipeRight = false;
 
-        #region ÏÊ-âåðñèÿ
+        #region ÐŸÐš-Ð²ÐµÑ€ÑÐ¸Ñ
         if (Input.GetMouseButtonDown(0))
         {
             Tap = true;
@@ -26,7 +24,7 @@ public class SwipeController : MonoBehaviour
         }
         #endregion
 
-        #region Ìîáèëüíàÿ âåðñèÿ
+        #region ÐœÐ¾Ð±Ð¸Ð»ÑŒÐ½Ð°Ñ Ð²ÐµÑ€ÑÐ¸Ñ
         if (Input.touches.Length > 0)
         {
             if (Input.touches[0].phase == TouchPhase.Began)
@@ -43,7 +41,7 @@ public class SwipeController : MonoBehaviour
         }
         #endregion
 
-        //Ïðîñ÷èòàòü äèñòàíöèþ
+        //ÐŸÑ€Ð¾ÑÑ‡Ð¸Ñ‚Ð°Ñ‚ÑŒ Ð´Ð¸ÑÑ‚Ð°Ð½Ñ†Ð¸ÑŽ
         _swipeDelta = Vector2.zero;
         if (_isDragging)
         {
@@ -53,10 +51,10 @@ public class SwipeController : MonoBehaviour
                 _swipeDelta = (Vector2)Input.mousePosition - _startTouch;
         }
 
-        //Ïðîâåðêà íà ïðîéäåííîñòü ðàññòîÿíèÿ
+        //ÐŸÑ€Ð¾Ð²ÐµÑ€ÐºÐ° Ð½Ð° Ð¿Ñ€Ð¾Ð¹Ð´ÐµÐ½Ð½Ð¾ÑÑ‚ÑŒ Ñ€Ð°ÑÑÑ‚Ð¾ÑÐ½Ð¸Ñ
         if (_swipeDelta.magnitude > 100)
         {
-            //Îïðåäåëåíèå íàïðàâëåíèÿ
+            //ÐžÐ¿Ñ€ÐµÐ´ÐµÐ»ÐµÐ½Ð¸Ðµ Ð½Ð°Ð¿Ñ€Ð°Ð²Ð»ÐµÐ½Ð¸Ñ
             float x = _swipeDelta.x;
             float y = _swipeDelta.y;
             if (Mathf.Abs(x) > Mathf.Abs(y))
