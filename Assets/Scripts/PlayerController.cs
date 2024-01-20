@@ -26,7 +26,7 @@ public class PlayerController : MonoBehaviour
 
     private void Update()
     {
-        if (SwipeController.SwipeRight)
+        if (SwipeController.SwipeRight || Input.GetKeyDown(KeyCode.RightArrow))
         {
             if (_lineToMove < 2)
             {
@@ -34,7 +34,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (SwipeController.SwipeLeft)
+        if (SwipeController.SwipeLeft || Input.GetKeyDown(KeyCode.LeftArrow))
         {
             if (_lineToMove > 0)
             {
@@ -42,7 +42,7 @@ public class PlayerController : MonoBehaviour
             }
         }
 
-        if (SwipeController.SwipeUp)
+        if (SwipeController.SwipeUp || Input.GetKeyDown(KeyCode.UpArrow))
         {
             if (_characterController.isGrounded)
             {
