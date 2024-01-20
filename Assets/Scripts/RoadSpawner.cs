@@ -4,35 +4,34 @@ using UnityEngine;
 public class RoadSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _roadPrefabs;
-    [SerializeField] private float _spawnPos;
-    [SerializeField] private float _speed = 10;
-    private readonly List<GameObject> _activeRoads = new();
-    private readonly List<GameObject> _noneActiveRoad = new();
-    private const float RoadLength = 100;
-    private const int InitRoads = 3;
-    private const int MaxRoads = 10;
+    [SerializeField] private GameObject _roadPrefab1;
+    [SerializeField] private GameObject _roadPrefab2;
+    [SerializeField] private GameObject _spawnObj;
+    [SerializeField] private Text _scoreText;
+    [SerializeField] private float _spawnPos = 0;
+    [SerializeField] private int _speed = 10;
+    private List<GameObject> _activeRoad = new List<GameObject>();
+    private float _roadLenght = 100;
+    private int _startRoad = 5;
+    private float _score;
 
-    public float Speed => _speed;
-    
+    public float Speed {get { return _speed; } private set { Speed = _speed; } }
+
+
     void Start()
     {
         for (var i = 0; i < MaxRoads; i++)
         {
-            if (i >= InitRoads)
+            if (i == 0 || i == 1)
             {
-                var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
-                    new Vector3(0, 0, 0), Quaternion.identity);
-                initializedRoad.SetActive(false);
-                _noneActiveRoad.Add(initializedRoad);
+                SpawnRoad(i);
             }
             else
             {
-                var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
-                    transform.forward * _spawnPos, Quaternion.identity);
-                initializedRoad.SetActive(true);
-                _spawnPos += RoadLength;
-                _activeRoads.Add(initializedRoad);
+                SpawnRoad();
             }
+            _spawnPos += _roadLenght;
+
         }
     }
 
@@ -43,13 +42,25 @@ public class RoadSpawner : MonoBehaviour
         road.SetActive(false);
         _noneActiveRoad.Add(road);
     }
-
-    public void ActivateRoad()
+    
+    public void SpawnRoad(int roadId)
     {
-        var roadToActivate = _noneActiveRoad[Random.Range(0, _noneActiveRoad.Count)];
-        _noneActiveRoad.Remove(roadToActivate);
-        roadToActivate.transform.position = new Vector3(0, 0, 200);
-        roadToActivate.SetActive(true);
-        _activeRoads.Add(roadToActivate);
+        GameObject _nextRoad = Instantiate(roadId == 1 ? _roadPrefab1 : _roadPrefab2, transform.forward * _spawnPos, Quaternion.identity);
+        _activeRoad.Add(_nextRoad);
+    }
+
+    public void DeleteRoad()
+    {
+        _activeRoad[0].SetActive(false);
+        _activeRoad.RemoveAt(0);
+    }
+
+    public void FixedUpdate()
+    {
+        if (Time.timeScale != 0)
+        {
+            _score += (float)_speed / 10;
+            _scoreText.text = (System.Math.Round(_score, 0)).ToString();
+        }
     }
 }

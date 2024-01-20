@@ -863,8 +863,8 @@ Transform:
   m_GameObject: {fileID: 1302242191}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 400}
+  m_LocalScale: {x: 0, y: 0, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -906,7 +906,11 @@ MonoBehaviour:
   - {fileID: 3468544210397804168, guid: 08f536d7e13943f4297bb2a24ac78672, type: 3}
   - {fileID: 3468544210397804168, guid: a18d9d2e1e5f28a4dac4c110082c27ad, type: 3}
   - {fileID: 3468544210397804168, guid: dbae5a19f0e63454cb3dab5d0db14fd2, type: 3}
-  _spawnPos: 50
+  _roadPrefab1: {fileID: 3468544210397804168, guid: 28b7613aec96fbb4199cf091f34835e6, type: 3}
+  _roadPrefab2: {fileID: 3468544210397804168, guid: d3d3f080b51c29e4e9452e10d3c5ecc6, type: 3}
+  _spawnObj: {fileID: 1302242191}
+  _scoreText: {fileID: 1670773816}
+  _spawnPos: 0
   _speed: 50
 --- !u!1 &1670773814
 GameObject:
