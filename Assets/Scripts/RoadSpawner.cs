@@ -5,14 +5,13 @@ using UnityEngine.UI;
 public class RoadSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _roadPrefabs;
-    [SerializeField] private GameObject _roadPrefab1;
-    [SerializeField] private GameObject _roadPrefab2;
+    [SerializeField] private GameObject _roadPrefab;
     [SerializeField] private GameObject _spawnObj;
     [SerializeField] private Text _scoreText;
     [SerializeField] private float _spawnPos = 0;
     [SerializeField] private int _speed = 10;
     private List<GameObject> _activeRoad = new List<GameObject>();
-    private float _roadLenght = 100;
+    private float _roadLenght = 200;
     private int _startRoad = 5;
     private float _score;
 
@@ -23,7 +22,7 @@ public class RoadSpawner : MonoBehaviour
     {
         for (int i = 0; i < _startRoad; i++)
         {
-            if (i == 0 || i == 1)
+            if (i == 0)
             {
                 SpawnRoad(i);
             }
@@ -45,7 +44,7 @@ public class RoadSpawner : MonoBehaviour
 
     public void SpawnRoad(int roadId)
     {
-        GameObject _nextRoad = Instantiate(roadId == 1 ? _roadPrefab1 : _roadPrefab2, transform.forward * _spawnPos, Quaternion.identity);
+        GameObject _nextRoad = Instantiate(_roadPrefab, transform.forward * _spawnPos, Quaternion.identity);
         _activeRoad.Add(_nextRoad);
     }
 
