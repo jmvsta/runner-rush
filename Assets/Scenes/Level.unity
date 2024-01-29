@@ -25,7 +25,7 @@ RenderSettings:
   m_AmbientGroundColor: {r: 0.047, g: 0.043, b: 0.035, a: 1}
   m_AmbientIntensity: 1
   m_AmbientMode: 3
-  m_SubtractiveShadowColor: {r: 0.9622642, g: 0.9622642, b: 0.9622642, a: 1}
+  m_SubtractiveShadowColor: {r: 0.764151, g: 0.28475437, b: 0.28475437, a: 1}
   m_SkyboxMaterial: {fileID: 2100000, guid: 11d7e7cf656fa8746a34b9af2b15d59a, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
@@ -634,7 +634,7 @@ Transform:
   m_GameObject: {fileID: 963194225}
   serializedVersion: 2
   m_LocalRotation: {x: 0.14571437, y: -0, z: -0, w: 0.9893267}
-  m_LocalPosition: {x: 0, y: 8.39, z: -12.76}
+  m_LocalPosition: {x: 0, y: 8.39, z: -10.2}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -747,14 +747,14 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Material: {fileID: 0}
-  m_Color: {r: 0.21960786, g: 0.21960786, b: 0.21960786, a: 0}
+  m_Color: {r: 0, g: 0, b: 0, a: 0}
   m_RaycastTarget: 1
   m_RaycastPadding: {x: 0, y: 0, z: 0, w: 0}
   m_Maskable: 1
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_Sprite: {fileID: 10907, guid: 0000000000000000f000000000000000, type: 0}
+  m_Sprite: {fileID: 0}
   m_Type: 1
   m_PreserveAspect: 0
   m_FillCenter: 1
@@ -906,11 +906,11 @@ MonoBehaviour:
   - {fileID: 740226506230035400, guid: 949fbfaaf1367bd4580df75d4d024d91, type: 3}
   - {fileID: 7673428756230532097, guid: 06bcd95cc1cdbd94eb10934a20d3ce98, type: 3}
   - {fileID: 254297243477746020, guid: f9108fc3edb1721449a48f75b8972bca, type: 3}
-  _roadPrefab: {fileID: 5800652423888131520, guid: d79669414f3604549b38cc822a70b319, type: 3}
+  _roadPrefab: {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
   _spawnObj: {fileID: 1302242191}
   _scoreText: {fileID: 1670773816}
   _spawnPos: 0
-  _speed: 50
+  _speed: 10
 --- !u!1 &1670773814
 GameObject:
   m_ObjectHideFlags: 0
