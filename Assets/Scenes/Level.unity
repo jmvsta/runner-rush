@@ -906,12 +906,13 @@ MonoBehaviour:
   - {fileID: 3468544210397804168, guid: 08f536d7e13943f4297bb2a24ac78672, type: 3}
   - {fileID: 3468544210397804168, guid: a18d9d2e1e5f28a4dac4c110082c27ad, type: 3}
   - {fileID: 3468544210397804168, guid: dbae5a19f0e63454cb3dab5d0db14fd2, type: 3}
-  _roadPrefab1: {fileID: 3468544210397804168, guid: 28b7613aec96fbb4199cf091f34835e6, type: 3}
-  _roadPrefab2: {fileID: 3468544210397804168, guid: d3d3f080b51c29e4e9452e10d3c5ecc6, type: 3}
-  _spawnObj: {fileID: 1302242191}
-  _scoreText: {fileID: 1670773816}
+  _durkaPrefabs:
+  - {fileID: 3468544210397804168, guid: 28b7613aec96fbb4199cf091f34835e6, type: 3}
+  - {fileID: 3468544210397804168, guid: d3d3f080b51c29e4e9452e10d3c5ecc6, type: 3}
+  - {fileID: 3468544210397804168, guid: e9c3d0cdc80a01342aabef2fe4335abf, type: 3}
   _spawnPos: 0
   _speed: 50
+  _scoreText: {fileID: 1670773816}
 --- !u!1 &1670773814
 GameObject:
   m_ObjectHideFlags: 0

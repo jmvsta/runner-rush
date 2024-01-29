@@ -1,6 +1,3 @@
-using System;
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -91,23 +88,25 @@ public class PlayerController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Respawn")
+        switch (other.gameObject.tag)
         {
-            _generator.SpawnRoad();
-            _generator.DeleteRoad();
-        }
-
-        if (other.gameObject.tag == "Died")
-        {
-            _losePanel.SetActive(true);
-            Time.timeScale = 0;
-        }
-
-        if (other.gameObject.tag == "Coin")
-        {
-            _coins++;
-            _coinsText.text = _coins.ToString();
-            Destroy(other.gameObject);
+            case "Respawn":
+                Debug.Log("respawn");
+                _generator.ProcessRoad(other.transform.parent.gameObject);
+                break;
+            
+            case "Died":
+                _losePanel.SetActive(true);
+                Time.timeScale = 0;
+                break;
+            
+            case "Coin":
+                _coins++;
+                _coinsText.text = _coins.ToString();
+                Destroy(other.gameObject);
+                break;
+            default:
+                break;
         }
     }
 }
