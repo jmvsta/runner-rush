@@ -1,6 +1,8 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class RoadSpawner : MonoBehaviour
 {
@@ -24,19 +26,28 @@ public class RoadSpawner : MonoBehaviour
       
     void Start()
     {
+        if (_durkaPrefabs.Length > _activeRoads)
+        {
+            throw new Exception("Cannot have init prefabs more than active roads");
+        }
+        
         for (var i = 0; i < _maxRoads; i++)
         {
-            if (i > 4)
+            if (i >= _activeRoads)
             {
                 var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
                     new Vector3(0, 0, 0), Quaternion.identity);
                 initializedRoad.SetActive(false);
                 _roads.Add(initializedRoad);
+            } else if (i < _durkaPrefabs.Length)
+            {
+                var initializedRoad = Instantiate(_durkaPrefabs[i], 
+                    transform.forward * _spawnPos, Quaternion.identity);
+                initializedRoad.SetActive(true);
+                _spawnPos += _roadLength;
             }
             else
             {
-                // var initializedRoad = Instantiate(_durkaPrefabs[i], 
-                //     transform.forward * _spawnPos, Quaternion.identity);
                 var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)], 
                     transform.forward * _spawnPos, Quaternion.identity);
                 initializedRoad.SetActive(true);
