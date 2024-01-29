@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.47925925, g: 0.30295342, b: 0.40714592, a: 1}
+  m_IndirectSpecularColor: {r: 0.48414296, g: 0.30600137, b: 0.41129544, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -906,11 +906,14 @@ MonoBehaviour:
   - {fileID: 740226506230035400, guid: 949fbfaaf1367bd4580df75d4d024d91, type: 3}
   - {fileID: 7673428756230532097, guid: 06bcd95cc1cdbd94eb10934a20d3ce98, type: 3}
   - {fileID: 254297243477746020, guid: f9108fc3edb1721449a48f75b8972bca, type: 3}
-  _roadPrefab: {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
-  _spawnObj: {fileID: 1302242191}
-  _scoreText: {fileID: 1670773816}
+  _durkaPrefabs:
+  - {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
   _spawnPos: 0
-  _speed: 10
+  _speed: 50
+  _scoreText: {fileID: 1670773816}
+  _roadLength: 200
+  _maxRoads: 10
+  _activeRoads: 5
 --- !u!1 &1670773814
 GameObject:
   m_ObjectHideFlags: 0

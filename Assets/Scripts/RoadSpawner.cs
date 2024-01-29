@@ -1,57 +1,60 @@
+using System;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using Random = UnityEngine.Random;
 
 public class RoadSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _roadPrefabs;
-    [SerializeField] private GameObject _roadPrefab;
-    [SerializeField] private GameObject _spawnObj;
-    [SerializeField] private Text _scoreText;
-    [SerializeField] private float _spawnPos = 0;
+    [SerializeField] private GameObject[] _durkaPrefabs;
+    [SerializeField] private float _spawnPos;
     [SerializeField] private int _speed = 10;
-    private List<GameObject> _activeRoad = new List<GameObject>();
-    private float _roadLenght = 200;
-    private int _startRoad = 5;
+    [SerializeField] private Text _scoreText;
+    [SerializeField] private float _roadLength = 100;
+    [SerializeField] private int _maxRoads = 10;
+    [SerializeField] private int _activeRoads = 5;
     private float _score;
+    private readonly List<GameObject> _roads = new();
+    private GameObject _prev;
+    private GameObject _next;
+    
+    
 
     public float Speed {get { return _speed; } private set { Speed = _speed; } }
 
-
+      
     void Start()
     {
-        for (int i = 0; i < _startRoad; i++)
+        if (_durkaPrefabs.Length > _activeRoads)
         {
-            if (i == 0)
+            throw new Exception("Cannot have init prefabs more than active roads");
+        }
+        
+        for (var i = 0; i < _maxRoads; i++)
+        {
+            if (i >= _activeRoads)
             {
-                SpawnRoad(i);
+                var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
+                    new Vector3(0, 0, 0), Quaternion.identity);
+                initializedRoad.SetActive(false);
+                _roads.Add(initializedRoad);
+            } else if (i < _durkaPrefabs.Length)
+            {
+                var initializedRoad = Instantiate(_durkaPrefabs[i], 
+                    transform.forward * _spawnPos, Quaternion.identity);
+                initializedRoad.SetActive(true);
+                _spawnPos += _roadLength;
             }
             else
             {
-                SpawnRoad();
+                var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)], 
+                    transform.forward * _spawnPos, Quaternion.identity);
+                initializedRoad.SetActive(true);
+                _spawnPos += _roadLength;
+                _roads.Add(initializedRoad);
             }
-            _spawnPos += _roadLenght;
         }
-
-        _spawnPos = _spawnObj.transform.position.z;
-    }
-
-    public void SpawnRoad()
-    {
-        GameObject _nextRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)], transform.forward * _spawnPos, Quaternion.identity);
-        _activeRoad.Add(_nextRoad);
-    }
-
-    public void SpawnRoad(int roadId)
-    {
-        GameObject _nextRoad = Instantiate(_roadPrefab, transform.forward * _spawnPos, Quaternion.identity);
-        _activeRoad.Add(_nextRoad);
-    }
-
-    public void DeleteRoad()
-    {
-        _activeRoad[0].SetActive(false);
-        _activeRoad.RemoveAt(0);
     }
 
     public void FixedUpdate()
@@ -59,7 +62,17 @@ public class RoadSpawner : MonoBehaviour
         if (Time.timeScale != 0)
         {
             _score += (float)_speed / 10;
-            _scoreText.text = (System.Math.Round(_score, 0)).ToString();
+            _scoreText.text = System.Math.Round(_score, 0).ToString();
         }
+    }
+    
+    public void ProcessRoad(GameObject road)
+    {
+        _roads.Find(r => r.Equals(_prev))?.SetActive(false);
+        _prev = road;
+        var activationCandidates = _roads.FindAll(r => r.activeSelf == false);
+        var roadToActivate = activationCandidates[Random.Range(0, activationCandidates.Count)];
+        roadToActivate.transform.position = new Vector3(0, 0, _activeRoads * _roadLength + road.transform.position.z);
+        roadToActivate.SetActive(true);
     }
 }

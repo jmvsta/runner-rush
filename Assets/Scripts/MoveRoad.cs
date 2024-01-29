@@ -1,16 +1,16 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class MoveRoad : MonoBehaviour
 {
-    private void FixedUpdate()
+    private RoadSpawner _roadSpawner;
+
+    private void Start()
     {
-       MovedRoad(GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>().Speed);
+        _roadSpawner = GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>();
     }
 
-    private void MovedRoad(float speed)
+    private void FixedUpdate()
     {
-        transform.Translate(-transform.forward * speed * Time.deltaTime);
+        transform.Translate(-transform.forward * _roadSpawner.Speed * Time.deltaTime);
     }
 }
