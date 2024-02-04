@@ -18,7 +18,8 @@ public class RoadSpawner : MonoBehaviour
     private readonly List<GameObject> _roads = new();
     private GameObject _prev;
     private GameObject _next;
-    
+    private EnemiesSpawner _enemiesSpawner;
+    private CoinsSpawner _coinsSpawner;
     
 
     public float Speed {get { return _speed; } private set { Speed = _speed; } }
@@ -26,6 +27,9 @@ public class RoadSpawner : MonoBehaviour
       
     void Start()
     {
+        _enemiesSpawner = GameObject.Find("EnemiesSpawner").GetComponent<EnemiesSpawner>();
+        _coinsSpawner = GameObject.Find("CoinsSpawner").GetComponent<CoinsSpawner>();
+        
         if (_durkaPrefabs.Length > _activeRoads)
         {
             throw new Exception("Cannot have init prefabs more than active roads");
@@ -51,6 +55,8 @@ public class RoadSpawner : MonoBehaviour
                 var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)], 
                     transform.forward * _spawnPos, Quaternion.identity);
                 initializedRoad.SetActive(true);
+                _enemiesSpawner.GenerateEnemy(_spawnPos);
+                _coinsSpawner.GenerateCoins(_spawnPos);
                 _spawnPos += _roadLength;
                 _roads.Add(initializedRoad);
             }
@@ -62,7 +68,7 @@ public class RoadSpawner : MonoBehaviour
         if (Time.timeScale != 0)
         {
             _score += (float)_speed / 10;
-            _scoreText.text = System.Math.Round(_score, 0).ToString();
+            _scoreText.text = Math.Round(_score, 0).ToString();
         }
     }
     
@@ -74,5 +80,7 @@ public class RoadSpawner : MonoBehaviour
         var roadToActivate = activationCandidates[Random.Range(0, activationCandidates.Count)];
         roadToActivate.transform.position = new Vector3(0, 0, _activeRoads * _roadLength + road.transform.position.z);
         roadToActivate.SetActive(true);
+        _enemiesSpawner.GenerateEnemy(_activeRoads * _roadLength + road.transform.position.z);
+        _coinsSpawner.GenerateCoins(_activeRoads * _roadLength + road.transform.position.z);
     }
 }
