@@ -6,15 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="road generation fix and speed fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/initPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/initPrefab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/initPrefab3.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/initPrefab3.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoadSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoadSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -48,6 +43,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/68/0839b9fc/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/95/fa0f1997/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/bc/31930f52/Component.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/c5/4af3bbc2/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/e5/7b9ef7c6/Random.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ed3dae649e648f7a159faaaa24538931fe00/2e/91a309b0/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ed3dae649e648f7a159faaaa24538931fe00/99/da2366e6/Collider.cs" root0="SKIP_HIGHLIGHTING" />
@@ -55,35 +51,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d303c2bf72cd4cec95665b89c457d265d2b8ef3ed6da17cd4f85587c2f9de7/System.Linq.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad1.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad2.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/PlaneRoad2.prefab" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/LosePanel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/LosePanel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/LosePanel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/LosePanel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/LosePanel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/LosePanel.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/MoveRoad.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/MoveRoad.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/MoveRoad.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/MoveRoad.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation@1.1.4/Editor/ConversionSystem/SystemConvertersEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Runtime/MeshOperations/QuadUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/LayoutPropertiesPreview.cs" root0="SKIP_HIGHLIGHTING" />
@@ -109,29 +76,29 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "git-widget-placeholder": "feature/smth",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rider.run.widget.enabled.cache": "false",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/smth&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   },
-  "keyToStringList": {
-    "rider.external.source.directories": [
-      "C:\\Users\\dmitr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache",
-      "C:\\Users\\dmitr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache",
-      "C:\\Users\\dmitr\\AppData\\Local\\Symbols\\src"
+  &quot;keyToStringList&quot;: {
+    &quot;rider.external.source.directories&quot;: [
+      &quot;C:\\Users\\dmitr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
+      &quot;C:\\Users\\dmitr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
+      &quot;C:\\Users\\dmitr\\AppData\\Local\\Symbols\\src&quot;
     ]
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="bugfix/roadgen" />
@@ -199,6 +166,7 @@
       <workItem from="1699785593381" duration="5000000" />
       <workItem from="1699989643569" duration="627000" />
       <workItem from="1706403054498" duration="22140000" />
+      <workItem from="1707009745219" duration="7514000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
