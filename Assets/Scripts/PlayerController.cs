@@ -10,6 +10,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _gravity;
     [SerializeField] private float _lineDistanse = 3;
     [SerializeField] private int _coins;
+    [SerializeField] private int _live;
     private CharacterController _characterController;
     private Vector3 _dir;
     private int _lineToMove = 1;
@@ -94,12 +95,12 @@ public class PlayerController : MonoBehaviour
                 Debug.Log("respawn");
                 _generator.ProcessRoad(other.transform.parent.gameObject);
                 break;
-            
+
             case "Died":
                 _losePanel.SetActive(true);
                 Time.timeScale = 0;
                 break;
-            
+
             case "Coin":
                 _coins++;
                 _coinsText.text = _coins.ToString();
@@ -109,4 +110,15 @@ public class PlayerController : MonoBehaviour
                 break;
         }
     }
+
+    //private void OnCollisionEnter(Collision collision)
+    //{
+    //    switch (collision.gameObject.tag)
+    //    {
+    //        case "Hit":
+    //            _live++;
+    //            Debug.Log(_live);
+    //            break;
+    //    }
+    //}
 }
