@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.48414296, g: 0.30600137, b: 0.41129544, a: 1}
+  m_IndirectSpecularColor: {r: 0.47925925, g: 0.30295342, b: 0.40714592, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -414,7 +414,7 @@ Light:
   m_Type: 1
   m_Shape: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 1.4
   m_Range: 10
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
@@ -909,7 +909,7 @@ MonoBehaviour:
   _durkaPrefabs:
   - {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
   _spawnPos: 0
-  _speed: 50
+  _speed: 20
   _scoreText: {fileID: 1670773816}
   _roadLength: 200
   _maxRoads: 10
@@ -1208,9 +1208,17 @@ PrefabInstance:
       propertyPath: m_Center.y
       value: 1.3551131
       objectReference: {fileID: 0}
+    - target: {fileID: 1821749268001481402, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
+      propertyPath: m_IsTrigger
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 3313280622090629559, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: m_Name
       value: Player
+      objectReference: {fileID: 0}
+    - target: {fileID: 3898169581449379508, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
+      propertyPath: m_Enabled
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 3898169581449379508, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: m_Center.y

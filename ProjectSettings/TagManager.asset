@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Died
   - Coin
+  - Hit
   layers:
   - Default
   - TransparentFX
