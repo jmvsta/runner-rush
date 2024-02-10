@@ -10,4 +10,14 @@ public class LosePanel : MonoBehaviour
         SceneManager.LoadScene(1);
         Time.timeScale = 0;
     }
+
+    public void PouseLevel()
+    {
+        Time.timeScale = 0;
+    }
+
+    public void ContinueLevel()
+    {
+        Time.timeScale = 1;
+    }
 }

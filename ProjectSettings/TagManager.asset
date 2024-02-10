@@ -7,6 +7,10 @@ TagManager:
   - Died
   - Coin
   - Hit
+  - DoubleScore
+  - Shield
+  - Block
+  - Shooting
   layers:
   - Default
   - TransparentFX
