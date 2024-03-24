@@ -5,19 +5,25 @@ using UnityEngine.UI;
 public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject _losePanel;
+    [SerializeField] private GameObject _continuePanel;
+    //[SerializeField] private GameObject _shield;
+    //[SerializeField] private GameObject _hit;
+    //[SerializeField] private GameObject _shooting;
     [SerializeField] private RoadSpawner _generator;
     [SerializeField] private Text _coinsText;
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _gravity;
     [SerializeField] private float _lineDistanse = 3;
     [SerializeField] private int _coins;
-    [SerializeField] private float _timeHit = 5f;
-    [SerializeField] private float _timeShield = 5f;
-    //[SerializeField] private float _timeShooting = 5f;
+    [SerializeField] private float _timeHit = 10f;
+    [SerializeField] private float _timeShield = 10f;
+    [SerializeField] private float _timeShooting = 10f;
     private Animator _animator;
     private CharacterController _characterController;
     private Vector3 _dir;
     private int _lineToMove = 1;
+    private int _maxLive = 2;
+    private int _live;
     private bool _isHit;
     private bool _isShield;
     //private bool _isShooting;
@@ -28,6 +34,7 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1;
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
+        _live = _maxLive;
     }
 
     private void Update()
@@ -107,9 +114,20 @@ public class PlayerController : MonoBehaviour
             case "Died":
                 if (_isShield)
                 {
+                    Debug.Log("Â האיהו ס רטוכהמל");
                     // Ñהוכאעü םמנל סעמכךםמגוםטו ס גנאדמל
                     break;
                 }
+
+                if (_live > 0)
+                {
+                    Time.timeScale = 0;
+                    _continuePanel.SetActive(true);
+                    _live--;
+                    break;
+                }
+
+                Debug.Log("Â האיהו ב‎ח רטוכהא");
                 _losePanel.SetActive(true);
                 Time.timeScale = 0;
                 break;
@@ -122,13 +140,22 @@ public class PlayerController : MonoBehaviour
 
                 if (_isHit)
                 {
+                    if (_live > 0)
+                    {
+                        Time.timeScale = 0;
+                        _continuePanel.SetActive(true);
+                        _live--;
+                        _isHit = false;
+                        break;
+                    }
+
                     _losePanel.SetActive(true);
                     Time.timeScale = 0;
                     _isHit = false;
                     break;
                 }
                 _isHit = true;
-                _animator.SetTrigger("isHit");
+                //_hit.SetActive(true);
                 StartCoroutine(Hited(_timeHit));
                 break;
 
@@ -141,43 +168,75 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Shield":
-                _animator.SetTrigger("isShielded");
                 other.gameObject.SetActive(false);
                 _isShield = true;
                 StartCoroutine(Shielded(_timeShield));
                 break;
 
-            //case "Shooting":
-            //    other.gameObject.SetActive(false);
-            //    _animator.SetTrigger("isShooting");
-            //    var hit = Physics.Raycast(transform.position, transform.forward, 500);
-            //    Debug.DrawRay(transform.position, Vector3.forward, Color.red);
+            case "Shooting":
+                other.gameObject.SetActive(false);
+                //_shooting.SetActive(true);
+                //_isShooting = true;
+                StartCoroutine(Shooting(_timeShooting));
+                break;
+        }
+    }
 
-            //    if (hit)
-            //    {
-            //        Debug.Log("Âהûשüüüü");
-            //    }
-            //    //_isShooting = true;
-            //    //StartCoroutine(Shooting(_timeShooting));
-            //    break;
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        Debug.Log("Äמ סגטעקו");
+
+        switch (collision.gameObject.tag)
+        {
+            case "Block":
+                Debug.Log("Â ךויסו");
+;
+                if (_isShield)
+                {
+                    Debug.Log("Â טפו");
+                    collision.gameObject.SetActive(false);
+                    break;
+                }
+                break;
         }
     }
 
     IEnumerator Hited(float time)
     {
-        yield return new WaitForSeconds(time);
+        _animator.SetTrigger("startHited");
+
+        yield return new WaitForSeconds(time - 2f);
+        
+        _animator.SetTrigger("isHit");
+
+        yield return new WaitForSeconds(2f);
         _isHit = false;
+        //_hit.SetActive(false);
     }
 
     IEnumerator Shielded(float time)
     {
-        yield return new WaitForSeconds(time);
+        _animator.SetTrigger("startShielded");
+
+        yield return new WaitForSeconds(time - 2f);
+        _animator.SetTrigger("isShielded");
+
+        yield return new WaitForSeconds(2f);
         _isShield = false;
+        //_shield.SetActive(false);
+
     }
 
-    //IEnumerator Shooting(float time)
-    //{
-    //    yield return new WaitForSeconds(time);
-    //    _isShooting = false;
-    //}
+    IEnumerator Shooting(float time)
+    {
+        _animator.SetTrigger("startShooting");
+
+        yield return new WaitForSeconds(time - 2f);
+        _animator.SetTrigger("isShooting");
+
+        yield return new WaitForSeconds(2f);
+       //_isShooting = false;
+        //_shooting.SetActive(false);
+    }
 }
