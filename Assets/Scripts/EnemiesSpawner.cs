@@ -1,14 +1,17 @@
+using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
 public class EnemiesSpawner : MonoBehaviour
 {
-    // private RoadSpawner _roadSpawner;
     [SerializeField] private GameObject[] _enemiesPrefabs;
+    private ExplosionsSpawner _explosionsSpawner;
     private List<GameObject> _enemies = new();
     private int _enemiesSize = 10;
+    
     void Start()
     {
+        _explosionsSpawner = GameObject.Find("ExplosionsSpawner").GetComponent<ExplosionsSpawner>();
         for (var i = 0; i <= _enemiesSize; i++)
         {
             var initializedEnemy = Instantiate(_enemiesPrefabs[Random.Range(0, _enemiesPrefabs.Length)],
@@ -16,7 +19,6 @@ public class EnemiesSpawner : MonoBehaviour
             initializedEnemy.SetActive(false);
             _enemies.Add(initializedEnemy);
         }
-        // _roadSpawner = GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>();
     }
 
     public void GenerateEnemy(float roadPos)
@@ -25,7 +27,15 @@ public class EnemiesSpawner : MonoBehaviour
         var enemyToActivate = activationCandidates[Random.Range(0, activationCandidates.Count)];
         enemyToActivate.transform.position = new Vector3(Random.Range(-1, 1) * 3, 0, roadPos + Random.Range(0, 100));
         enemyToActivate.SetActive(true);
-        // return enemyToActivate;
+    }
+
+    public void KillEnemy(Collider other)
+    {
+        var enemy = other.transform.parent.gameObject.transform.parent.gameObject;
+        var place = new Vector3(enemy.transform.position.x, 2, 0);
+        var explosion = _explosionsSpawner.GenerateExplosion(place, ExplosionsSpawner.ExplosionType.Enemy);
+        enemy.SetActive(false);
+        StartCoroutine(ExplosionsSpawner.DisableExplosionDelay(explosion));
     }
 
     // Update is called once per frame

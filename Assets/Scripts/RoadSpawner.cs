@@ -72,8 +72,9 @@ public class RoadSpawner : MonoBehaviour
         }
     }
     
-    public void ProcessRoad(GameObject road)
+    public void ProcessRoad(Collider other)
     {
+        GameObject road = other.transform.parent.gameObject;
         _roads.Find(r => r.Equals(_prev))?.SetActive(false);
         _prev = road;
         var activationCandidates = _roads.FindAll(r => r.activeSelf == false);

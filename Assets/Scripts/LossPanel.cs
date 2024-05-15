@@ -1,9 +1,7 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
-public class LosePanel : MonoBehaviour
+public class LossPanel : MonoBehaviour
 {
     public void RestartLevel()
     {
@@ -11,7 +9,7 @@ public class LosePanel : MonoBehaviour
         Time.timeScale = 0;
     }
 
-    public void PouseLevel()
+    public void PauseLevel()
     {
         Time.timeScale = 0;
     }
