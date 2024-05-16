@@ -19,7 +19,6 @@ public class RoadSpawner : MonoBehaviour
     private GameObject _prev;
     private GameObject _next;
     private EnemiesSpawner _enemiesSpawner;
-    //private CoinsSpawner _coinsSpawner;
     
 
     public float Speed {get { return _speed; } private set { Speed = _speed; } }
@@ -28,7 +27,6 @@ public class RoadSpawner : MonoBehaviour
     void Start()
     {
         _enemiesSpawner = GameObject.Find("EnemiesSpawner").GetComponent<EnemiesSpawner>();
-        //_coinsSpawner = GameObject.Find("CoinsSpawner").GetComponent<CoinsSpawner>();
         
         if (_durkaPrefabs.Length > _activeRoads)
         {
@@ -56,7 +54,6 @@ public class RoadSpawner : MonoBehaviour
                     transform.forward * _spawnPos, Quaternion.identity);
                 initializedRoad.SetActive(true);
                 _enemiesSpawner.GenerateEnemy(_spawnPos);
-               // _coinsSpawner.GenerateCoins(_spawnPos);
                 _spawnPos += _roadLength;
                 _roads.Add(initializedRoad);
             }
@@ -82,6 +79,5 @@ public class RoadSpawner : MonoBehaviour
         roadToActivate.transform.position = new Vector3(0, 0, _activeRoads * _roadLength + road.transform.position.z);
         roadToActivate.SetActive(true);
         _enemiesSpawner.GenerateEnemy(_activeRoads * _roadLength + road.transform.position.z);
-       // _coinsSpawner.GenerateCoins(_activeRoads * _roadLength + road.transform.position.z);
     }
 }
