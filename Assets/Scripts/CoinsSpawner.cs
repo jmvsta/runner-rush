@@ -14,7 +14,6 @@ public class CoinsSpawner : MonoBehaviour
             initializedEnemy.SetActive(false);
             _coins.Add(initializedEnemy);
         }
-        // _roadSpawner = GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>();
     }
 
     public void GenerateCoins(float roadPos)
@@ -24,11 +23,8 @@ public class CoinsSpawner : MonoBehaviour
             coin.transform.position = new Vector3(Random.Range(-1, 1) * 3, Random.Range(0, 4) * 3, roadPos += 10);
             coin.SetActive(true);
         });
-
-        // return enemyToActivate;
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         _coins.FindAll(r => r.activeSelf && r.transform.position.z < -10).ForEach(r => r.SetActive(false));

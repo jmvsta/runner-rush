@@ -1,4 +1,3 @@
-using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
@@ -37,8 +36,7 @@ public class EnemiesSpawner : MonoBehaviour
         enemy.SetActive(false);
         StartCoroutine(ExplosionsSpawner.DisableExplosionDelay(explosion));
     }
-
-    // Update is called once per frame
+    
     void Update()
     {
         _enemies.FindAll(r => r.activeSelf && r.transform.position.z < -10).ForEach(r => r.SetActive(false));

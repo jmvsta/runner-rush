@@ -8,9 +8,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private GameObject _continuePanel;
     [SerializeField] private GameObject _player;
     private ExplosionsSpawner _explosionsSpawner;
-    //[SerializeField] private GameObject _shield;
-    //[SerializeField] private GameObject _hit;
-    //[SerializeField] private GameObject _shooting;
     [SerializeField] private RoadSpawner _roadSpawner;
     [SerializeField] private EnemiesSpawner _enemiesSpawner;
     [SerializeField] private Text _coinsText;
@@ -21,16 +18,13 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _timeHit = 10f;
     [SerializeField] private float _timeShield = 10f;
     [SerializeField] private float _timeShooting = 10f;
+    [SerializeField] private int _live;
     private Animator _animator;
     private CharacterController _characterController;
     private Vector3 _dir;
     private int _lineToMove = 1;
-    private int _maxLive = 2;
-    [SerializeField] private int _live;
     private bool _isHit;
-
     private bool _isShield;
-    //private bool _isShooting;
 
     void Start()
     {
@@ -39,7 +33,6 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1;
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
-        _live = _maxLive;
     }
 
     private void Update()
@@ -90,7 +83,6 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
-        //    _dir.z = _speed;
         _dir.y += _gravity * Time.fixedDeltaTime;
         _characterController.Move(_dir * Time.fixedDeltaTime);
     }
@@ -115,19 +107,14 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (_live > 0)
                 {
-                    StartCoroutine(Freeze());
-                    _continuePanel.SetActive(true);
+                    StartCoroutine(ActivatePanel(_continuePanel));
                     _enemiesSpawner.KillEnemy(other);
                     _live--;
                 }
                 else
                 {
-                    _lossPanel.SetActive(true);
-                    var place = new Vector3(_player.transform.position.x, 2, 0);
-                    var explosion = _explosionsSpawner.GenerateExplosion(place, ExplosionsSpawner.ExplosionType.Enemy);
-                    StartCoroutine(ExplosionsSpawner.DisableExplosionDelay(explosion));
-                    // _player.SetActive(false);
-                    StartCoroutine(Freeze1());
+                    _enemiesSpawner.KillEnemy(other);
+                    StartCoroutine(ActivatePanel(_lossPanel));
                 }
                 break;
             
@@ -173,22 +160,23 @@ public class PlayerController : MonoBehaviour
 
             case "Shooting":
                 other.gameObject.SetActive(false);
-                //_shooting.SetActive(true);
-                //_isShooting = true;
                 StartCoroutine(Shooting(_timeShooting));
                 break;
         }
     }
 
-    IEnumerator Freeze()
+    private IEnumerator ActivatePanel(GameObject _pannel)
     {
+        _pannel.SetActive(true);
+        for (var i = 0; i < _pannel.transform.childCount; i++)
+        {
+            _pannel.transform.GetChild(i).gameObject.SetActive(false);
+        }
         yield return new WaitForSeconds(1);
-        Time.timeScale = 0;
-    }
-    IEnumerator Freeze1()
-    {
-        _animator.SetTrigger("Died");
-        yield return new WaitForSeconds(2);
+        for (var i = 0; i < _pannel.transform.childCount; i++)
+        {
+            _pannel.transform.GetChild(i).gameObject.SetActive(true);
+        }
         Time.timeScale = 0;
     }
 
@@ -208,15 +196,14 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Hit(float time)
     {
-        _animator.SetTrigger("startHited");
+        _animator.SetTrigger("StartHited");
 
         yield return new WaitForSeconds(time - 2f);
 
-        _animator.SetTrigger("isHit");
+        _animator.SetTrigger("IsHit");
 
         yield return new WaitForSeconds(2f);
         _isHit = false;
-        //_hit.SetActive(false);
     }
 
     IEnumerator Shielded(float time)
@@ -228,7 +215,6 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         _isShield = false;
-        //_shield.SetActive(false);
     }
 
     IEnumerator Shooting(float time)
@@ -239,7 +225,5 @@ public class PlayerController : MonoBehaviour
         _animator.SetTrigger("isShooting");
 
         yield return new WaitForSeconds(2f);
-        //_isShooting = false;
-        //_shooting.SetActive(false);
     }
 }

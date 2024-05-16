@@ -4,6 +4,7 @@ using UnityEngine.SceneManagement;
 public class ContinuePanel : MonoBehaviour
 {
     [SerializeField] private GameObject _continuePanel;
+
     public void Died()
     {
         _continuePanel.SetActive(false);
