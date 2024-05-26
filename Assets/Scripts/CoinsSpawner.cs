@@ -11,6 +11,7 @@ public class CoinsSpawner : MonoBehaviour
     private readonly int _coinsSize = 300;
     private readonly int _coinsBatchSize = 40;
     private readonly Random Random = new();
+    public List<GameObject> Coins => _coins;
     
     void Start()
     {

@@ -7,6 +7,7 @@ public class EnemiesSpawner : MonoBehaviour
     private ExplosionsSpawner _explosionsSpawner;
     private List<GameObject> _enemies = new();
     private int _enemiesSize = 10;
+    public List<GameObject> Enemies => _enemies; 
     
     void Start()
     {

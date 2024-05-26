@@ -8,8 +8,9 @@ using Random = UnityEngine.Random;
 public class ExplosionsSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _explosionPrefabs;
-    private readonly Dictionary <ExplosionType, List<GameObject>> _explosions = new();
+    private readonly Dictionary<ExplosionType, List<GameObject>> _explosions = new();
     private int _explosionsSize = 10;
+    public Dictionary<ExplosionType, List<GameObject>> Explosions => _explosions;
     
     public enum ExplosionType
     {

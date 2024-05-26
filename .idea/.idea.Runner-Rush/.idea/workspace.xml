@@ -4,14 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="* Fixed bugs:&#10;https://www.notion.so/Bug-50-199fdb944bc24f07a098e77361a792f3?pvs=4&#10;https://www.notion.so/Bug-50-bfb742bbcfe94cb583d4d1ac034978ca?pvs=4&#10;* Added coins spawner with different strategies. Currently implemented only straight in 3 lines of x axis, which peaked randomly">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoinsGeneration/GenerationStrategy.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/CoinsGeneration/GenerationStrategy.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="again fixed:&#10;https://www.notion.so/Bug-50-199fdb944bc24f07a098e77361a792f3?pvs=4&#10;basic coins generation strategies">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/SpawnController.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/SpawnController.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/CoinsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CoinsSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemiesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ExplosionsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ExplosionsSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoadSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoadSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -285,7 +287,14 @@
       <option name="project" value="LOCAL" />
       <updated>1716727871013</updated>
     </task>
-    <option name="localTasksCounter" value="8" />
+    <task id="LOCAL-00008" summary="again fixed:&#10;https://www.notion.so/Bug-50-199fdb944bc24f07a098e77361a792f3?pvs=4&#10;basic coins generation strategies">
+      <created>1716750047452</created>
+      <option name="number" value="00008" />
+      <option name="presentableId" value="LOCAL-00008" />
+      <option name="project" value="LOCAL" />
+      <updated>1716750047452</updated>
+    </task>
+    <option name="localTasksCounter" value="9" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,7 +369,8 @@
     <MESSAGE value="road generation fix and speed fix" />
     <MESSAGE value="returned coins spawner" />
     <MESSAGE value="* Fixed bugs:&#10;https://www.notion.so/Bug-50-199fdb944bc24f07a098e77361a792f3?pvs=4&#10;https://www.notion.so/Bug-50-bfb742bbcfe94cb583d4d1ac034978ca?pvs=4&#10;* Added coins spawner with different strategies. Currently implemented only straight in 3 lines of x axis, which peaked randomly" />
-    <option name="LAST_COMMIT_MESSAGE" value="* Fixed bugs:&#10;https://www.notion.so/Bug-50-199fdb944bc24f07a098e77361a792f3?pvs=4&#10;https://www.notion.so/Bug-50-bfb742bbcfe94cb583d4d1ac034978ca?pvs=4&#10;* Added coins spawner with different strategies. Currently implemented only straight in 3 lines of x axis, which peaked randomly" />
+    <MESSAGE value="again fixed:&#10;https://www.notion.so/Bug-50-199fdb944bc24f07a098e77361a792f3?pvs=4&#10;basic coins generation strategies" />
+    <option name="LAST_COMMIT_MESSAGE" value="again fixed:&#10;https://www.notion.so/Bug-50-199fdb944bc24f07a098e77361a792f3?pvs=4&#10;basic coins generation strategies" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -432,13 +442,13 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/CoinsSpawner.cs</url>
-          <line>27</line>
+          <line>28</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\CoinsSpawner.cs" initialLine="27" containingFunctionPresentation="method 'GenerateCoins'">
             <startOffsets>
-              <option value="896" />
+              <option value="941" />
             </startOffsets>
             <endOffsets>
-              <option value="897" />
+              <option value="942" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="36" />

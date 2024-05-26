@@ -23,15 +23,8 @@ public class RoadSpawner : MonoBehaviour
     private CoinsSpawner _coinsSpawner;
     
 
-    public float Speed
-    {
-        get => _speed;
-        private set
-        {
-            _spawnPos = value;
-            Speed = _speed;
-        }
-    }
+    public float Speed => _speed;
+    public List<GameObject> Roads => _roads;
 
 
     void Start()
