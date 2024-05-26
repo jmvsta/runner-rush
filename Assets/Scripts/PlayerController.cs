@@ -1,6 +1,7 @@
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
+using Spawn;
 
 public class PlayerController : MonoBehaviour
 {
@@ -112,8 +113,9 @@ public class PlayerController : MonoBehaviour
                     _enemiesSpawner.KillEnemy(other);
                     StartCoroutine(ActivatePanel(_lossPanel));
                 }
+
                 break;
-            
+
             case "Hit":
                 if (_isShield)
                 {
