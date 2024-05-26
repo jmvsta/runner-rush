@@ -3,13 +3,14 @@ using UnityEngine;
 
 public class EnemiesSpawner : MonoBehaviour
 {
-    // private RoadSpawner _roadSpawner;
     [SerializeField] private GameObject[] _enemiesPrefabs;
+    private ExplosionsSpawner _explosionsSpawner;
     private List<GameObject> _enemies = new();
     private int _enemiesSize = 10;
     
     void Start()
     {
+        _explosionsSpawner = GameObject.Find("ExplosionsSpawner").GetComponent<ExplosionsSpawner>();
         for (var i = 0; i <= _enemiesSize; i++)
         {
             var initializedEnemy = Instantiate(_enemiesPrefabs[Random.Range(0, _enemiesPrefabs.Length)],
@@ -27,7 +28,15 @@ public class EnemiesSpawner : MonoBehaviour
         enemyToActivate.SetActive(true);
     }
 
-    // Update is called once per frame
+    public void KillEnemy(Collider other)
+    {
+        var enemy = other.transform.parent.gameObject.transform.parent.gameObject;
+        var place = new Vector3(enemy.transform.position.x, 2, 0);
+        var explosion = _explosionsSpawner.GenerateExplosion(place, ExplosionsSpawner.ExplosionType.Enemy);
+        enemy.SetActive(false);
+        StartCoroutine(ExplosionsSpawner.DisableExplosionDelay(explosion));
+    }
+    
     void Update()
     {
         _enemies.FindAll(r => r.activeSelf && r.transform.position.z < -10).ForEach(r => r.SetActive(false));

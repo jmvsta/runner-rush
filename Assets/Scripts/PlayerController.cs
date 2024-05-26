@@ -4,12 +4,12 @@ using UnityEngine.UI;
 
 public class PlayerController : MonoBehaviour
 {
-    [SerializeField] private GameObject _losePanel;
+    [SerializeField] private GameObject _lossPanel;
     [SerializeField] private GameObject _continuePanel;
-    //[SerializeField] private GameObject _shield;
-    //[SerializeField] private GameObject _hit;
-    //[SerializeField] private GameObject _shooting;
-    [SerializeField] private RoadSpawner _generator;
+    [SerializeField] private GameObject _player;
+    private ExplosionsSpawner _explosionsSpawner;
+    [SerializeField] private RoadSpawner _roadSpawner;
+    [SerializeField] private EnemiesSpawner _enemiesSpawner;
     [SerializeField] private Text _coinsText;
     [SerializeField] private float _jumpForce;
     [SerializeField] private float _gravity;
@@ -18,81 +18,71 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _timeHit = 10f;
     [SerializeField] private float _timeShield = 10f;
     [SerializeField] private float _timeShooting = 10f;
+    [SerializeField] private int _live;
     private Animator _animator;
     private CharacterController _characterController;
     private Vector3 _dir;
     private int _lineToMove = 1;
-    private int _maxLive = 2;
-    private int _live;
     private bool _isHit;
     private bool _isShield;
-    //private bool _isShooting;
 
     void Start()
     {
-        _losePanel.SetActive(false);
+        _explosionsSpawner = GameObject.Find("ExplosionsSpawner").GetComponent<ExplosionsSpawner>();
+        _lossPanel.SetActive(false);
         Time.timeScale = 1;
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
-        _live = _maxLive;
     }
 
     private void Update()
     {
-        if (SwipeController.SwipeRight || Input.GetKeyDown(KeyCode.RightArrow))
+        if (_lossPanel.activeSelf || _continuePanel.activeSelf) return;
+
+        if ((SwipeController.SwipeRight || Input.GetKeyDown(KeyCode.RightArrow)) && _lineToMove < 2)
         {
-            if (_lineToMove < 2)
-            {
-                _lineToMove++;
-            }
+            _lineToMove++;
         }
 
-        if (SwipeController.SwipeLeft || Input.GetKeyDown(KeyCode.LeftArrow))
+        if ((SwipeController.SwipeLeft || Input.GetKeyDown(KeyCode.LeftArrow)) && _lineToMove > 0)
         {
-            if (_lineToMove > 0)
-            {
-                _lineToMove--;
-            }
+            _lineToMove--;
         }
 
-        if (SwipeController.SwipeUp || Input.GetKeyDown(KeyCode.UpArrow))
+        if ((SwipeController.SwipeUp || Input.GetKeyDown(KeyCode.UpArrow)) && _characterController.isGrounded)
         {
-            if (_characterController.isGrounded)
-            {
-                Jump();
-            }
+            Jump();
         }
 
-        Vector3 _targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
+        Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
         if (_lineToMove == 0)
         {
-            _targetPosition += Vector3.left * _lineDistanse;
+            targetPosition += Vector3.left * _lineDistanse;
         }
         else if (_lineToMove == 2)
         {
-            _targetPosition += Vector3.right * _lineDistanse;
+            targetPosition += Vector3.right * _lineDistanse;
         }
 
-        if (transform.position == _targetPosition)
+        if (transform.position == targetPosition)
         {
             return;
         }
 
-        Vector3 _dif = _targetPosition - transform.position;
-        Vector3 _moveDir = _dif.normalized * 25 * Time.deltaTime;
-        if (_moveDir.sqrMagnitude > _dif.sqrMagnitude)
+        Vector3 dif = targetPosition - transform.position;
+        Vector3 moveDir = dif.normalized * 25 * Time.deltaTime;
+        if (moveDir.sqrMagnitude > dif.sqrMagnitude)
         {
-            _characterController.Move(_moveDir);
+            _characterController.Move(moveDir);
         }
         else
         {
-            _characterController.Move(_dif);
+            _characterController.Move(dif);
         }
     }
 
     void FixedUpdate()
     {
-        //    _dir.z = _speed;
         _dir.y += _gravity * Time.fixedDeltaTime;
         _characterController.Move(_dir * Time.fixedDeltaTime);
     }
@@ -107,31 +97,27 @@ public class PlayerController : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Respawn":
-                Debug.Log("respawn");
-                _generator.ProcessRoad(other.transform.parent.gameObject);
+                _roadSpawner.ProcessRoad(other);
                 break;
 
             case "Died":
                 if (_isShield)
                 {
-                    Debug.Log("В дайде с шиелдом");
-                    // Сделать норм столкновение с врагом
-                    break;
+                    _enemiesSpawner.KillEnemy(other);
                 }
-
-                if (_live > 0)
+                else if (_live > 0)
                 {
-                    Time.timeScale = 0;
-                    _continuePanel.SetActive(true);
+                    StartCoroutine(ActivatePanel(_continuePanel));
+                    _enemiesSpawner.KillEnemy(other);
                     _live--;
-                    break;
                 }
-
-                Debug.Log("В дайде бэз шиелда");
-                _losePanel.SetActive(true);
-                Time.timeScale = 0;
+                else
+                {
+                    _enemiesSpawner.KillEnemy(other);
+                    StartCoroutine(ActivatePanel(_lossPanel));
+                }
                 break;
-
+            
             case "Hit":
                 if (_isShield)
                 {
@@ -149,22 +135,21 @@ public class PlayerController : MonoBehaviour
                         break;
                     }
 
-                    _losePanel.SetActive(true);
+                    _lossPanel.SetActive(true);
                     Time.timeScale = 0;
                     _isHit = false;
                     break;
                 }
+
                 _isHit = true;
                 //_hit.SetActive(true);
-                StartCoroutine(Hited(_timeHit));
+                StartCoroutine(Hit(_timeHit));
                 break;
 
             case "Coin":
                 _coins++;
                 _coinsText.text = _coins.ToString();
                 Destroy(other.gameObject);
-                break;
-            default:
                 break;
 
             case "Shield":
@@ -175,44 +160,50 @@ public class PlayerController : MonoBehaviour
 
             case "Shooting":
                 other.gameObject.SetActive(false);
-                //_shooting.SetActive(true);
-                //_isShooting = true;
                 StartCoroutine(Shooting(_timeShooting));
                 break;
         }
     }
 
+    private IEnumerator ActivatePanel(GameObject _pannel)
+    {
+        _pannel.SetActive(true);
+        for (var i = 0; i < _pannel.transform.childCount; i++)
+        {
+            _pannel.transform.GetChild(i).gameObject.SetActive(false);
+        }
+        yield return new WaitForSeconds(1);
+        for (var i = 0; i < _pannel.transform.childCount; i++)
+        {
+            _pannel.transform.GetChild(i).gameObject.SetActive(true);
+        }
+        Time.timeScale = 0;
+    }
 
     private void OnCollisionEnter(Collision collision)
     {
-        Debug.Log("До свитче");
-
         switch (collision.gameObject.tag)
         {
             case "Block":
-                Debug.Log("В кейсе");
-;
                 if (_isShield)
                 {
-                    Debug.Log("В ифе");
                     collision.gameObject.SetActive(false);
-                    break;
                 }
+
                 break;
         }
     }
 
-    IEnumerator Hited(float time)
+    IEnumerator Hit(float time)
     {
-        _animator.SetTrigger("startHited");
+        _animator.SetTrigger("StartHited");
 
         yield return new WaitForSeconds(time - 2f);
-        
-        _animator.SetTrigger("isHit");
+
+        _animator.SetTrigger("IsHit");
 
         yield return new WaitForSeconds(2f);
         _isHit = false;
-        //_hit.SetActive(false);
     }
 
     IEnumerator Shielded(float time)
@@ -224,8 +215,6 @@ public class PlayerController : MonoBehaviour
 
         yield return new WaitForSeconds(2f);
         _isShield = false;
-        //_shield.SetActive(false);
-
     }
 
     IEnumerator Shooting(float time)
@@ -236,7 +225,5 @@ public class PlayerController : MonoBehaviour
         _animator.SetTrigger("isShooting");
 
         yield return new WaitForSeconds(2f);
-       //_isShooting = false;
-        //_shooting.SetActive(false);
     }
 }

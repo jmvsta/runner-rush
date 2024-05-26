@@ -56,7 +56,7 @@ public class RoadSpawner : MonoBehaviour
                     transform.forward * _spawnPos, Quaternion.identity);
                 initializedRoad.SetActive(true);
                 _enemiesSpawner.GenerateEnemy(_spawnPos);
-               _coinsSpawner.GenerateCoins(_spawnPos);
+                _coinsSpawner.GenerateCoins(_spawnPos);
                 _spawnPos += _roadLength;
                 _roads.Add(initializedRoad);
             }
@@ -72,8 +72,9 @@ public class RoadSpawner : MonoBehaviour
         }
     }
     
-    public void ProcessRoad(GameObject road) 
+    public void ProcessRoad(Collider other)
     {
+        GameObject road = other.transform.parent.gameObject;
         _roads.Find(r => r.Equals(_prev))?.SetActive(false);
         _prev = road;
         var activationCandidates = _roads.FindAll(r => r.activeSelf == false);

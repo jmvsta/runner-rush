@@ -1,5 +1,3 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 
 public class SwipeController : MonoBehaviour
@@ -21,7 +19,6 @@ public class SwipeController : MonoBehaviour
         }
         else if (Input.GetMouseButtonUp(0))
         {
-            //_isDragging = false;
             Reset();
         }
         #endregion
@@ -37,13 +34,11 @@ public class SwipeController : MonoBehaviour
             }
             else if (Input.touches[0].phase == TouchPhase.Ended || Input.touches[0].phase == TouchPhase.Canceled)
             {
-                //_isDragging = false;
                 Reset();
             }
         }
         #endregion
-
-        //Просчитать дистанцию
+        
         _swipeDelta = Vector2.zero;
         if (_isDragging)
         {
@@ -52,11 +47,9 @@ public class SwipeController : MonoBehaviour
             else if (Input.GetMouseButton(0))
                 _swipeDelta = (Vector2)Input.mousePosition - _startTouch;
         }
-
-        //Проверка на пройденность расстояния
+        
         if (_swipeDelta.magnitude > 100)
         {
-            //Определение направления
             float x = _swipeDelta.x;
             float y = _swipeDelta.y;
             if (Mathf.Abs(x) > Mathf.Abs(y))
