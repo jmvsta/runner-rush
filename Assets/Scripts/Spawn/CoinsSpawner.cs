@@ -25,6 +25,7 @@ namespace Spawn
             }
         }
 
+        // TODO: generation depending on obstacles, also maybe static enemies
         public void GenerateCoins(float roadPos)
         {
             Fabric.GetStrategy((Strategy)Random.Next(0, 3))

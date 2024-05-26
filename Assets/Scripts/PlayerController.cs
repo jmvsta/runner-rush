@@ -7,7 +7,7 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject _lossPanel;
     [SerializeField] private GameObject _continuePanel;
-    [SerializeField] private RoadSpawner _roadSpawner;
+    [SerializeField] private SpawnController _spawnController;
     [SerializeField] private EnemiesSpawner _enemiesSpawner;
     [SerializeField] private Text _coinsText;
     [SerializeField] private float _jumpForce;
@@ -37,6 +37,7 @@ public class PlayerController : MonoBehaviour
         Time.timeScale = 1;
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
+        _spawnController = GameObject.Find("SpawnController").GetComponent<SpawnController>();
     }
 
     private void Update()
@@ -94,7 +95,7 @@ public class PlayerController : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Respawn":
-                _roadSpawner.ProcessRoad(other);
+                _spawnController.GenerateNext(other);
                 break;
 
             case "Died":

@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 99717344}
   - component: {fileID: 99717343}
   m_Layer: 0
-  m_Name: SpawnFacade
+  m_Name: SpawnController
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1850,6 +1850,7 @@ MonoBehaviour:
   - {fileID: 3602767048257216474, guid: c10f0cf76628e6142bb2b076b321ed6b, type: 3}
   - {fileID: 6329494900828432573, guid: 7fa44fd882b0b224fb5dc5590406b6e4, type: 3}
   - {fileID: 4615287335853860842, guid: 5127b82d393deab46ba43dd1585ca444, type: 3}
+  - {fileID: 22873255985260617, guid: fbd0813fdcff4de4282beb23fe9d9220, type: 3}
 --- !u!4 &1676640485
 Transform:
   m_ObjectHideFlags: 0

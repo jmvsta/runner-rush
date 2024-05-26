@@ -22,6 +22,7 @@ namespace Spawn
         private GameObject _prev;
         private GameObject _next;
         private EnemiesSpawner _enemiesSpawner;
+        private ObstaclesSpawner _obstaclesSpawner;
         private CoinsSpawner _coinsSpawner;
 
 
@@ -33,6 +34,7 @@ namespace Spawn
         {
             _enemiesSpawner = GameObject.Find("EnemiesSpawner").GetComponent<EnemiesSpawner>();
             _coinsSpawner = GameObject.Find("CoinsSpawner").GetComponent<CoinsSpawner>();
+            _obstaclesSpawner = GameObject.Find("ObstaclesSpawner").GetComponent<ObstaclesSpawner>();
 
             if (_asylumPrefabs.Length > _activeRoads)
             {
@@ -50,13 +52,14 @@ namespace Spawn
                 }
                 else if (i < _asylumPrefabs.Length)
                 {
-                    var initializedRoad = Instantiate(_asylumPrefabs[i],
+                    _prev = Instantiate(_asylumPrefabs[i],
                         transform.forward * _spawnPos, Quaternion.identity);
-                    initializedRoad.SetActive(true);
+                    _prev.SetActive(true);
                     _spawnPos += _roadLength;
                 }
                 else
                 {
+                    // TODO: to replace with SpawnRoad call
                     var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
                         transform.forward * _spawnPos, Quaternion.identity);
                     initializedRoad.SetActive(true);
@@ -77,9 +80,8 @@ namespace Spawn
             }
         }
 
-        public void ProcessRoad(Collider other)
+        public void SpawnRoad(GameObject road)
         {
-            GameObject road = other.transform.parent.gameObject;
             _roads.Find(r => r.Equals(_prev))?.SetActive(false);
             _prev = road;
             var activationCandidates = _roads.FindAll(r => r.activeSelf == false);
@@ -87,8 +89,6 @@ namespace Spawn
             var position = road.transform.position;
             roadToActivate.transform.position = new Vector3(0, 0, _activeRoads * _roadLength + position.z);
             roadToActivate.SetActive(true);
-            _enemiesSpawner.GenerateEnemy(_activeRoads * _roadLength + position.z);
-            _coinsSpawner.GenerateCoins(_activeRoads * _roadLength + position.z - 50);
         }
     }
 }
