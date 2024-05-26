@@ -1536,7 +1536,7 @@ MonoBehaviour:
   _asylumPrefabs:
   - {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
   _spawnPos: 0
-  _speed: 25
+  _speed: 50
   _scoreText: {fileID: 1670773816}
   _roadLength: 200
   _maxRoads: 10

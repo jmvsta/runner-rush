@@ -23,9 +23,17 @@ public class RoadSpawner : MonoBehaviour
     private CoinsSpawner _coinsSpawner;
     
 
-    public float Speed {get { return _speed; } private set { Speed = _speed; } }
+    public float Speed
+    {
+        get => _speed;
+        private set
+        {
+            _spawnPos = value;
+            Speed = _speed;
+        }
+    }
 
-      
+
     void Start()
     {
         _enemiesSpawner = GameObject.Find("EnemiesSpawner").GetComponent<EnemiesSpawner>();
@@ -57,7 +65,7 @@ public class RoadSpawner : MonoBehaviour
                     transform.forward * _spawnPos, Quaternion.identity);
                 initializedRoad.SetActive(true);
                 _enemiesSpawner.GenerateEnemy(_spawnPos);
-                _coinsSpawner.GenerateCoins(_spawnPos);
+                _coinsSpawner.GenerateCoins(_spawnPos - 50);
                 _spawnPos += _roadLength;
                 _roads.Add(initializedRoad);
             }
@@ -84,6 +92,6 @@ public class RoadSpawner : MonoBehaviour
         roadToActivate.transform.position = new Vector3(0, 0, _activeRoads * _roadLength + position.z);
         roadToActivate.SetActive(true);
         _enemiesSpawner.GenerateEnemy(_activeRoads * _roadLength + position.z);
-       _coinsSpawner.GenerateCoins(_activeRoads * _roadLength + position.z);
+       _coinsSpawner.GenerateCoins(_activeRoads * _roadLength + position.z - 50);
     }
 }

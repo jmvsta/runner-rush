@@ -23,6 +23,12 @@ public class PlayerController : MonoBehaviour
     private int _lineToMove = 1;
     private bool _isHit;
     private bool _isShield;
+    private static readonly int IsHit = Animator.StringToHash("isHit");
+    private static readonly int StartHited = Animator.StringToHash("startHited");
+    private static readonly int StartShielded = Animator.StringToHash("startShielded");
+    private static readonly int IsShielded = Animator.StringToHash("isShielded");
+    private static readonly int StartShooting = Animator.StringToHash("startShooting");
+    private static readonly int IsShooting = Animator.StringToHash("isShooting");
 
     void Start()
     {
@@ -68,14 +74,7 @@ public class PlayerController : MonoBehaviour
 
         Vector3 dif = targetPosition - transform.position;
         Vector3 moveDir = dif.normalized * 25 * Time.deltaTime;
-        if (moveDir.sqrMagnitude > dif.sqrMagnitude)
-        {
-            _characterController.Move(moveDir);
-        }
-        else
-        {
-            _characterController.Move(dif);
-        }
+        _characterController.Move(moveDir.sqrMagnitude > dif.sqrMagnitude ? moveDir : dif);
     }
 
     void FixedUpdate()
@@ -163,16 +162,8 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator ActivatePanel(GameObject panel)
     {
-        panel.SetActive(true);
-        for (var i = 0; i < panel.transform.childCount; i++)
-        {
-            panel.transform.GetChild(i).gameObject.SetActive(false);
-        }
         yield return new WaitForSeconds(1);
-        for (var i = 0; i < panel.transform.childCount; i++)
-        {
-            panel.transform.GetChild(i).gameObject.SetActive(true);
-        }
+        panel.SetActive(true);
         Time.timeScale = 0;
     }
 
@@ -192,11 +183,11 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Hit(float time)
     {
-        _animator.SetTrigger("StartHited");
+        _animator.SetTrigger(StartHited);
 
         yield return new WaitForSeconds(time - 2f);
 
-        _animator.SetTrigger("IsHit");
+        _animator.SetTrigger(IsHit);
 
         yield return new WaitForSeconds(2f);
         _isHit = false;
@@ -204,10 +195,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Shielded(float time)
     {
-        _animator.SetTrigger("startShielded");
+        _animator.SetTrigger(StartShielded);
 
         yield return new WaitForSeconds(time - 2f);
-        _animator.SetTrigger("isShielded");
+        _animator.SetTrigger(IsShielded);
 
         yield return new WaitForSeconds(2f);
         _isShield = false;
@@ -215,10 +206,10 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Shooting(float time)
     {
-        _animator.SetTrigger("startShooting");
+        _animator.SetTrigger(StartShooting);
 
         yield return new WaitForSeconds(time - 2f);
-        _animator.SetTrigger("isShooting");
+        _animator.SetTrigger(IsShooting);
 
         yield return new WaitForSeconds(2f);
     }
