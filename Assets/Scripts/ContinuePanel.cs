@@ -1,11 +1,10 @@
-using System.Collections;
-using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ContinuePanel : MonoBehaviour
 {
     [SerializeField] private GameObject _continuePanel;
+    
     public void Died()
     {
         _continuePanel.SetActive(false);

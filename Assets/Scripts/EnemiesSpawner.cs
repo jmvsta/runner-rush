@@ -7,6 +7,7 @@ public class EnemiesSpawner : MonoBehaviour
     [SerializeField] private GameObject[] _enemiesPrefabs;
     private List<GameObject> _enemies = new();
     private int _enemiesSize = 10;
+    
     void Start()
     {
         for (var i = 0; i <= _enemiesSize; i++)
@@ -16,7 +17,6 @@ public class EnemiesSpawner : MonoBehaviour
             initializedEnemy.SetActive(false);
             _enemies.Add(initializedEnemy);
         }
-        // _roadSpawner = GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>();
     }
 
     public void GenerateEnemy(float roadPos)
@@ -25,7 +25,6 @@ public class EnemiesSpawner : MonoBehaviour
         var enemyToActivate = activationCandidates[Random.Range(0, activationCandidates.Count)];
         enemyToActivate.transform.position = new Vector3(Random.Range(-1, 1) * 3, 0, roadPos + Random.Range(0, 100));
         enemyToActivate.SetActive(true);
-        // return enemyToActivate;
     }
 
     // Update is called once per frame

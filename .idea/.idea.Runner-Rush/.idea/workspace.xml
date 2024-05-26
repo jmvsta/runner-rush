@@ -6,9 +6,10 @@
   <component name="ChangeListManager">
     <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="road generation fix and speed fix">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/initPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/initPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/CameraController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ContinuePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ContinuePanel.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/EnemiesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/EnemiesSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/RoadSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/RoadSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -139,10 +140,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12036">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="12036" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -167,6 +168,7 @@
       <workItem from="1699989643569" duration="627000" />
       <workItem from="1706403054498" duration="22140000" />
       <workItem from="1707009745219" duration="7514000" />
+      <workItem from="1716717314810" duration="1737000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
@@ -291,6 +293,36 @@
     <option name="LAST_COMMIT_MESSAGE" value="road generation fix and speed fix" />
   </component>
   <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/CoinsSpawner.cs</url>
+          <line>10</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\CoinsSpawner.cs" initialLine="10" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="260" />
+            </startOffsets>
+            <endOffsets>
+              <option value="297" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="1" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/RoadSpawner.cs</url>
+          <line>29</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\RoadSpawner.cs" initialLine="29" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="923" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1006" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="2" />
+        </line-breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="road.name" />
