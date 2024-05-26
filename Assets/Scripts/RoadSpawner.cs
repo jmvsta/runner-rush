@@ -1,5 +1,6 @@
 using System;
 using System.Collections.Generic;
+using System.Globalization;
 using UnityEngine;
 using UnityEngine.UI;
 using Random = UnityEngine.Random;
@@ -7,7 +8,7 @@ using Random = UnityEngine.Random;
 public class RoadSpawner : MonoBehaviour
 {
     [SerializeField] private GameObject[] _roadPrefabs;
-    [SerializeField] private GameObject[] _durkaPrefabs;
+    [SerializeField] private GameObject[] _asylumPrefabs;
     [SerializeField] private float _spawnPos;
     [SerializeField] private int _speed = 10;
     [SerializeField] private Text _scoreText;
@@ -28,9 +29,9 @@ public class RoadSpawner : MonoBehaviour
     void Start()
     {
         _enemiesSpawner = GameObject.Find("EnemiesSpawner").GetComponent<EnemiesSpawner>();
-        _coinsSpawner = GameObject.Find("CoinsSpawnerNew").GetComponent<CoinsSpawner>();
+        _coinsSpawner = GameObject.Find("CoinsSpawner").GetComponent<CoinsSpawner>();
         
-        if (_durkaPrefabs.Length > _activeRoads)
+        if (_asylumPrefabs.Length > _activeRoads)
         {
             throw new Exception("Cannot have init prefabs more than active roads");
         }
@@ -43,9 +44,9 @@ public class RoadSpawner : MonoBehaviour
                     new Vector3(0, 0, 0), Quaternion.identity);
                 initializedRoad.SetActive(false);
                 _roads.Add(initializedRoad);
-            } else if (i < _durkaPrefabs.Length)
+            } else if (i < _asylumPrefabs.Length)
             {
-                var initializedRoad = Instantiate(_durkaPrefabs[i], 
+                var initializedRoad = Instantiate(_asylumPrefabs[i], 
                     transform.forward * _spawnPos, Quaternion.identity);
                 initializedRoad.SetActive(true);
                 _spawnPos += _roadLength;
@@ -68,7 +69,7 @@ public class RoadSpawner : MonoBehaviour
         if (Time.timeScale != 0)
         {
             _score += (float)_speed / 10;
-            _scoreText.text = Math.Round(_score, 0).ToString();
+            _scoreText.text = Math.Round(_score, 0).ToString(CultureInfo.InvariantCulture);
         }
     }
     
@@ -79,9 +80,10 @@ public class RoadSpawner : MonoBehaviour
         _prev = road;
         var activationCandidates = _roads.FindAll(r => r.activeSelf == false);
         var roadToActivate = activationCandidates[Random.Range(0, activationCandidates.Count)];
-        roadToActivate.transform.position = new Vector3(0, 0, _activeRoads * _roadLength + road.transform.position.z);
+        var position = road.transform.position;
+        roadToActivate.transform.position = new Vector3(0, 0, _activeRoads * _roadLength + position.z);
         roadToActivate.SetActive(true);
-        _enemiesSpawner.GenerateEnemy(_activeRoads * _roadLength + road.transform.position.z);
-       _coinsSpawner.GenerateCoins(_activeRoads * _roadLength + road.transform.position.z);
+        _enemiesSpawner.GenerateEnemy(_activeRoads * _roadLength + position.z);
+       _coinsSpawner.GenerateCoins(_activeRoads * _roadLength + position.z);
     }
 }

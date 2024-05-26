@@ -6,8 +6,6 @@ public class PlayerController : MonoBehaviour
 {
     [SerializeField] private GameObject _lossPanel;
     [SerializeField] private GameObject _continuePanel;
-    [SerializeField] private GameObject _player;
-    private ExplosionsSpawner _explosionsSpawner;
     [SerializeField] private RoadSpawner _roadSpawner;
     [SerializeField] private EnemiesSpawner _enemiesSpawner;
     [SerializeField] private Text _coinsText;
@@ -28,7 +26,6 @@ public class PlayerController : MonoBehaviour
 
     void Start()
     {
-        _explosionsSpawner = GameObject.Find("ExplosionsSpawner").GetComponent<ExplosionsSpawner>();
         _lossPanel.SetActive(false);
         Time.timeScale = 1;
         _characterController = GetComponent<CharacterController>();
@@ -142,14 +139,13 @@ public class PlayerController : MonoBehaviour
                 }
 
                 _isHit = true;
-                //_hit.SetActive(true);
                 StartCoroutine(Hit(_timeHit));
                 break;
 
             case "Coin":
                 _coins++;
                 _coinsText.text = _coins.ToString();
-                Destroy(other.gameObject);
+                other.gameObject.SetActive(false);
                 break;
 
             case "Shield":
@@ -165,17 +161,17 @@ public class PlayerController : MonoBehaviour
         }
     }
 
-    private IEnumerator ActivatePanel(GameObject _pannel)
+    private IEnumerator ActivatePanel(GameObject panel)
     {
-        _pannel.SetActive(true);
-        for (var i = 0; i < _pannel.transform.childCount; i++)
+        panel.SetActive(true);
+        for (var i = 0; i < panel.transform.childCount; i++)
         {
-            _pannel.transform.GetChild(i).gameObject.SetActive(false);
+            panel.transform.GetChild(i).gameObject.SetActive(false);
         }
         yield return new WaitForSeconds(1);
-        for (var i = 0; i < _pannel.transform.childCount; i++)
+        for (var i = 0; i < panel.transform.childCount; i++)
         {
-            _pannel.transform.GetChild(i).gameObject.SetActive(true);
+            panel.transform.GetChild(i).gameObject.SetActive(true);
         }
         Time.timeScale = 0;
     }
