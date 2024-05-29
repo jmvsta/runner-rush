@@ -4,21 +4,17 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="ObstaclesSpawner added, temp prefabs">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/SpawnController.cs" afterDir="false" />
+    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (1).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (4).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (4).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (5).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (5).prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (6).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (6).prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad2.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad3.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/EnemiesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/EnemiesSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/RoadSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/RoadSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/SpawnFacade.cs" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/SpawnController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/SpawnController.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -50,23 +46,6 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/02/200a66c8/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/26/eb3caa85/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/34/208157bf/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -93,12 +72,6 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d303c2bf72cd4cec95665b89c457d265d2b8ef3ed6da17cd4f85587c2f9de7/System.Linq.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/PlayerController.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
-    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/RoadSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation@1.1.4/Editor/ConversionSystem/SystemConvertersEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Runtime/MeshOperations/QuadUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/LayoutPropertiesPreview.cs" root0="SKIP_HIGHLIGHTING" />
@@ -143,6 +116,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "WebServerToolWindowFactoryState": "false",
+    "XThreadsFramesViewSplitterKey": "0.4945946",
     "git-widget-placeholder": "feature/smth",
     "node.js.detected.package.eslint": "true",
     "node.js.detected.package.tslint": "true",
@@ -201,10 +175,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="12036">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="28976">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="12036" />
+      <option name="pid" value="28976" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -235,6 +209,7 @@
       <workItem from="1712775280188" duration="6301000" />
       <workItem from="1715794170066" duration="3454000" />
       <workItem from="1715851147284" duration="10423000" />
+      <workItem from="1716982922058" duration="16311000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
@@ -311,7 +286,21 @@
       <option name="project" value="LOCAL" />
       <updated>1716754491643</updated>
     </task>
-    <option name="localTasksCounter" value="11" />
+    <task id="LOCAL-00011" summary="made obstacles generated. moved spawn logic in spawn controller">
+      <created>1716757372077</created>
+      <option name="number" value="00011" />
+      <option name="presentableId" value="LOCAL-00011" />
+      <option name="project" value="LOCAL" />
+      <updated>1716757372077</updated>
+    </task>
+    <task id="LOCAL-00012" summary="temp Cube prefab">
+      <created>1716757388144</created>
+      <option name="number" value="00012" />
+      <option name="presentableId" value="LOCAL-00012" />
+      <option name="project" value="LOCAL" />
+      <updated>1716757388144</updated>
+    </task>
+    <option name="localTasksCounter" value="13" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -389,7 +378,9 @@
     <MESSAGE value="again fixed:&#10;https://www.notion.so/Bug-50-199fdb944bc24f07a098e77361a792f3?pvs=4&#10;basic coins generation strategies" />
     <MESSAGE value="Added spawn controller" />
     <MESSAGE value="ObstaclesSpawner added, temp prefabs" />
-    <option name="LAST_COMMIT_MESSAGE" value="ObstaclesSpawner added, temp prefabs" />
+    <MESSAGE value="made obstacles generated. moved spawn logic in spawn controller" />
+    <MESSAGE value="temp Cube prefab" />
+    <option name="LAST_COMMIT_MESSAGE" value="temp Cube prefab" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -448,22 +439,31 @@
         </line-breakpoint>
         <line-breakpoint enabled="true" type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs</url>
-          <line>59</line>
-          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\CoinsGeneration\GenerationStrategy.cs" initialLine="51" containingFunctionPresentation="method 'Apply'">
+          <line>76</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\CoinsGeneration\GenerationStrategy.cs" initialLine="51" containingFunctionPresentation="method 'Apply'" />
+          <option name="timeStamp" value="32" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs</url>
+          <line>108</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\CoinsGeneration\GenerationStrategy.cs" initialLine="111" containingFunctionPresentation="method 'Apply'">
             <startOffsets>
-              <option value="1703" />
+              <option value="3510" />
             </startOffsets>
             <endOffsets>
-              <option value="1737" />
+              <option value="3548" />
             </endOffsets>
           </properties>
-          <option name="timeStamp" value="32" />
+          <option name="timeStamp" value="38" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
     <watches-manager>
       <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
         <watch expression="gameObjects[i].transform.position" />
+        <watch expression="obstVec.z - roadPos" />
+        <watch expression="position" />
+        <watch expression="position.x + scale.x / 2  &gt;= posX" />
       </configuration>
     </watches-manager>
   </component>

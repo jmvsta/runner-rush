@@ -25,9 +25,13 @@ namespace Spawn
             GameObject colliderParent = other.transform.parent.gameObject;
             var position = colliderParent.transform.position;
             _roadSpawner.SpawnRoad(colliderParent);
-            _enemiesSpawner.GenerateEnemy(500 + position.z);
-            _coinsSpawner.GenerateCoins(450 + position.z);
-            _obstaclesSpawner.GenerateObstacles(350 + position.z);
+            var enemy = _enemiesSpawner.GenerateEnemy(350 + position.z);
+            var activeObstacles = _obstaclesSpawner.GenerateObstacles(350 + position.z);
+            activeObstacles.Add(enemy);
+            activeObstacles.Sort((x, y) => x.transform.position.z.CompareTo(y.transform.position.z));
+            // if enemy static
+            // activeObstacles.Add(enemy);
+            _coinsSpawner.GenerateCoins(activeObstacles, 350 + position.z);
         }
     }
 }

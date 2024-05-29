@@ -64,7 +64,7 @@ namespace Spawn
                         transform.forward * _spawnPos, Quaternion.identity);
                     initializedRoad.SetActive(true);
                     _enemiesSpawner.GenerateEnemy(_spawnPos);
-                    _coinsSpawner.GenerateCoins(_spawnPos - 50);
+                    // _coinsSpawner.GenerateCoins(_spawnPos - 50);
                     _spawnPos += _roadLength;
                     _roads.Add(initializedRoad);
                 }

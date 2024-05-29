@@ -7,7 +7,7 @@ namespace Spawn
     {
         [SerializeField] private GameObject[] _enemiesPrefabs;
         private ExplosionsSpawner _explosionsSpawner;
-        private List<GameObject> _enemies = new();
+        private readonly List<GameObject> _enemies = new();
         private int _enemiesSize = 10;
         public List<GameObject> Enemies => _enemies;
 
@@ -23,13 +23,14 @@ namespace Spawn
             }
         }
 
-        public void GenerateEnemy(float roadPos)
+        public GameObject GenerateEnemy(float roadPos)
         {
             var activationCandidates = _enemies.FindAll(r => r.activeSelf == false);
             var enemyToActivate = activationCandidates[Random.Range(0, activationCandidates.Count)];
             enemyToActivate.transform.position =
                 new Vector3(Random.Range(-1, 1) * 3, 0, roadPos + Random.Range(0, 100));
             enemyToActivate.SetActive(true);
+            return enemyToActivate;
         }
 
         public void KillEnemy(Collider other)

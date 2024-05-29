@@ -1,7 +1,7 @@
 ﻿using System.Collections.Generic;
 using System.Linq;
+using Spawn.CoinsGeneration;
 using UnityEngine;
-using CoinsGeneration;
 using Random = System.Random;
 
 namespace Spawn
@@ -26,10 +26,11 @@ namespace Spawn
         }
 
         // TODO: generation depending on obstacles, also maybe static enemies
-        public void GenerateCoins(float roadPos)
+        public void GenerateCoins(List<GameObject> obstacles, float roadPos)
         {
-            Fabric.GetStrategy((Strategy)Random.Next(0, 3))
-                .Apply(_coins.FindAll(r => !r.activeSelf).Take(_coinsBatchSize).ToList(), roadPos);
+            // Fabric.GetStrategy((Strategy)Random.Next(0, 3))
+            Fabric.GetStrategy(0)
+                .Apply(_coins.FindAll(r => !r.activeSelf).Take(_coinsBatchSize).ToList(), obstacles, roadPos);
         }
 
         void Update()

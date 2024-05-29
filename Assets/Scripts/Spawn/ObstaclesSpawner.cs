@@ -24,14 +24,15 @@ namespace Spawn
         }
 
         // TODO: more complicated generation of obstacles
-        public void GenerateObstacles(float roadPos)
+        public List<GameObject> GenerateObstacles(float roadPos)
         {
-            var obstaclesToActivate = _obstacles.FindAll(r => !r.activeSelf).Take(4).ToList();
-            for (var i = 0; i < 4; i++, roadPos += 25)
+            var activeObstacles = _obstacles.FindAll(r => !r.activeSelf).Take(4).ToList();
+            for (var i = 0; i < 4; i++)
             {
-                obstaclesToActivate[i].transform.position = new Vector3(_random.Next(-1, 1) * 3, 0, roadPos);
-                obstaclesToActivate[i].SetActive(true);
+                activeObstacles[i].transform.position = new Vector3(_random.Next(-1, 1) * 3, 0, roadPos + _random.Next(15, 86));
+                activeObstacles[i].SetActive(true);
             }
+            return activeObstacles;
         }
 
         void Update()
