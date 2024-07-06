@@ -10,7 +10,6 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private SpawnController _spawnController;
     [SerializeField] private EnemiesSpawner _enemiesSpawner;
     [SerializeField] private Text _coinsText;
-    [SerializeField] private float _jumpForce;
     [SerializeField] private float _gravity;
     [SerializeField] private float _lineDistanse = 3;
     [SerializeField] private int _coins;
@@ -18,6 +17,7 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _timeShield = 10f;
     [SerializeField] private float _timeShooting = 10f;
     [SerializeField] private int _live;
+    private RoadSpawner _roadSpawner;
     private Animator _animator;
     private CharacterController _characterController;
     private Vector3 _dir;
@@ -30,7 +30,15 @@ public class PlayerController : MonoBehaviour
     private static readonly int IsShielded = Animator.StringToHash("isShielded");
     private static readonly int StartShooting = Animator.StringToHash("startShooting");
     private static readonly int IsShooting = Animator.StringToHash("isShooting");
-
+    private float _airDensity = 1.225f;
+    private float _dragCoefficient = 1.1f;
+    private float _crossSectionalArea = 0.5f;
+    private float _mass = 60;
+    private float _prevSpeed;
+    public float swipeThreshold = 50f;
+    private Vector2 _touchStartPos;
+    private Vector2 _touchEndPos;
+    
     void Start()
     {
         _lossPanel.SetActive(false);
@@ -38,6 +46,8 @@ public class PlayerController : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
         _animator = GetComponent<Animator>();
         _spawnController = GameObject.Find("SpawnController").GetComponent<SpawnController>();
+        _roadSpawner = GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>();
+        _prevSpeed = _roadSpawner.Speed;
     }
 
     private void Update()
@@ -48,15 +58,39 @@ public class PlayerController : MonoBehaviour
         {
             _lineToMove++;
         }
-
-        if ((SwipeController.SwipeLeft || Input.GetKeyDown(KeyCode.LeftArrow)) && _lineToMove > 0)
+        else if ((SwipeController.SwipeLeft || Input.GetKeyDown(KeyCode.LeftArrow)) && _lineToMove > 0)
         {
             _lineToMove--;
         }
-
-        if ((SwipeController.SwipeUp || Input.GetKeyDown(KeyCode.UpArrow)) && _characterController.isGrounded)
+        else if ((Input.touchCount > 0 || Input.GetKeyDown(KeyCode.UpArrow)) && _characterController.isGrounded && _roadSpawner.Speed >= _prevSpeed)
         {
-            Jump();
+            Touch touch = Input.GetTouch(0);
+
+            if (touch.phase == TouchPhase.Began)
+            {
+                _touchStartPos = touch.position;
+            }
+            else if (touch.phase == TouchPhase.Ended)
+            {
+                _touchEndPos = touch.position;
+                var swipeValue = _touchEndPos.y - _touchStartPos.y;
+
+                if (Mathf.Abs(swipeValue) > swipeThreshold)
+                {
+                    switch (Mathf.Abs(swipeValue))
+                    {
+                        case <= 250:
+                            Jump(10);
+                            break;
+                        case > 250 and <= 500:
+                            Jump(15);
+                            break;
+                        case >= 500:
+                            Jump(20);
+                            break;
+                    }
+                }
+            }
         }
 
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
@@ -81,13 +115,25 @@ public class PlayerController : MonoBehaviour
 
     void FixedUpdate()
     {
+        if (!_characterController.isGrounded)
+        {
+            var accelerationDueToDrag = 0.5f * _airDensity * _roadSpawner.Speed * _roadSpawner.Speed *
+                _dragCoefficient * _crossSectionalArea / _mass;
+            _roadSpawner.Speed -= accelerationDueToDrag * Time.fixedDeltaTime;
+        }
+        else if (_roadSpawner.Speed < _prevSpeed)
+        {
+            _roadSpawner.Speed++;
+        }
+
         _dir.y += _gravity * Time.fixedDeltaTime;
         _characterController.Move(_dir * Time.fixedDeltaTime);
     }
 
-    private void Jump()
+    private void Jump(float jumpForce)
     {
-        _dir.y = _jumpForce;
+        _prevSpeed = _roadSpawner.Speed;
+        _dir.y = jumpForce;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -118,8 +164,10 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Hit":
+                Debug.Log("Hit");
                 if (_isShield)
                 {
+                    other.gameObject.SetActive(false);
                     break;
                 }
 
@@ -128,6 +176,7 @@ public class PlayerController : MonoBehaviour
                     if (_live > 0)
                     {
                         Time.timeScale = 0;
+                        // _enemiesSpawner.KillEnemy(other);
                         _continuePanel.SetActive(true);
                         _live--;
                         _isHit = false;

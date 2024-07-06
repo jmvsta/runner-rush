@@ -12,29 +12,25 @@ namespace Spawn
         [SerializeField] private GameObject[] _roadPrefabs;
         [SerializeField] private GameObject[] _asylumPrefabs;
         [SerializeField] private float _spawnPos;
-        [SerializeField] private int _speed = 10;
+        [SerializeField] private float _speed = 10;
         [SerializeField] private Text _scoreText;
         [SerializeField] private float _roadLength = 100;
         [SerializeField] private int _maxRoads = 10;
         [SerializeField] private int _activeRoads = 5;
-        private float _score;
         private readonly List<GameObject> _roads = new();
         private GameObject _prev;
-        private GameObject _next;
-        private EnemiesSpawner _enemiesSpawner;
-        private ObstaclesSpawner _obstaclesSpawner;
-        private CoinsSpawner _coinsSpawner;
+        private float _score;
+        public float Speed
+        {
+            get => _speed;
+            set => _speed = value;
+        }
 
-
-        public float Speed => _speed;
         public List<GameObject> Roads => _roads;
 
 
         void Start()
         {
-            _enemiesSpawner = GameObject.Find("EnemiesSpawner").GetComponent<EnemiesSpawner>();
-            _coinsSpawner = GameObject.Find("CoinsSpawner").GetComponent<CoinsSpawner>();
-            _obstaclesSpawner = GameObject.Find("ObstaclesSpawner").GetComponent<ObstaclesSpawner>();
 
             if (_asylumPrefabs.Length > _activeRoads)
             {
@@ -63,7 +59,6 @@ namespace Spawn
                     var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
                         transform.forward * _spawnPos, Quaternion.identity);
                     initializedRoad.SetActive(true);
-                    _enemiesSpawner.GenerateEnemy(_spawnPos);
                     // _coinsSpawner.GenerateCoins(_spawnPos - 50);
                     _spawnPos += _roadLength;
                     _roads.Add(initializedRoad);

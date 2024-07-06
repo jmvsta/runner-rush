@@ -11,8 +11,9 @@ namespace Spawn
         [SerializeField] private GameObject _coinPrefab;
         private readonly List<GameObject> _coins = new();
         private readonly int _coinsSize = 300;
-        private readonly int _coinsBatchSize = 40;
-        private readonly Random Random = new();
+        private readonly int _coinsBatchSize = 41;
+        private readonly Random _random = new();
+        private GameObject _tail;
         public List<GameObject> Coins => _coins;
 
         void Start()
@@ -29,8 +30,9 @@ namespace Spawn
         public void GenerateCoins(List<GameObject> obstacles, float roadPos)
         {
             // Fabric.GetStrategy((Strategy)Random.Next(0, 3))
-            Fabric.GetStrategy(0)
-                .Apply(_coins.FindAll(r => !r.activeSelf).Take(_coinsBatchSize).ToList(), obstacles, roadPos);
+            var coinsToActivateList = _coins.FindAll(r => !r.activeSelf).Take(_coinsBatchSize).ToList();
+            Fabric.GetStrategy(0).Apply(coinsToActivateList, obstacles, roadPos, _tail);
+            _tail = coinsToActivateList[^1];
         }
 
         void Update()
