@@ -11,7 +11,6 @@ namespace Spawn
     {
         [SerializeField] private GameObject[] _roadPrefabs;
         [SerializeField] private GameObject[] _asylumPrefabs;
-        [SerializeField] private float _spawnPos;
         [SerializeField] private float _speed = 10;
         [SerializeField] private Text _scoreText;
         [SerializeField] private float _roadLength = 100;
@@ -31,7 +30,7 @@ namespace Spawn
 
         void Start()
         {
-
+            float _spawnPos = 0;
             if (_asylumPrefabs.Length > _activeRoads)
             {
                 throw new Exception("Cannot have init prefabs more than active roads");

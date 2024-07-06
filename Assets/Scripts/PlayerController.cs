@@ -164,7 +164,6 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Hit":
-                Debug.Log("Hit");
                 if (_isShield)
                 {
                     other.gameObject.SetActive(false);

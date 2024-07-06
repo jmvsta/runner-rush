@@ -1,7 +1,7 @@
 using UnityEngine;
 using Spawn;
 
-public class MoveRoad : MonoBehaviour
+public class Move : MonoBehaviour
 {
     private RoadSpawner _roadSpawner;
 
