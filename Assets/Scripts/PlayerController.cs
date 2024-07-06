@@ -35,13 +35,10 @@ public class PlayerController : MonoBehaviour
     private float _crossSectionalArea = 0.5f;
     private float _mass = 60;
     private float _prevSpeed;
-
-    private Vector2 touchStartPos;
-    private Vector2 touchEndPos;
-
-    public float swipeThreshold = 50f; // Minimum distance for a swipe to be registered
-
-
+    public float swipeThreshold = 50f;
+    private Vector2 _touchStartPos;
+    private Vector2 _touchEndPos;
+    
     void Start()
     {
         _lossPanel.SetActive(false);
@@ -71,12 +68,12 @@ public class PlayerController : MonoBehaviour
 
             if (touch.phase == TouchPhase.Began)
             {
-                touchStartPos = touch.position;
+                _touchStartPos = touch.position;
             }
             else if (touch.phase == TouchPhase.Ended)
             {
-                touchEndPos = touch.position;
-                var swipeValue = touchEndPos.y - touchStartPos.y;
+                _touchEndPos = touch.position;
+                var swipeValue = _touchEndPos.y - _touchStartPos.y;
 
                 if (Mathf.Abs(swipeValue) > swipeThreshold)
                 {
@@ -167,8 +164,10 @@ public class PlayerController : MonoBehaviour
                 break;
 
             case "Hit":
+                Debug.Log("Hit");
                 if (_isShield)
                 {
+                    other.gameObject.SetActive(false);
                     break;
                 }
 
@@ -177,6 +176,7 @@ public class PlayerController : MonoBehaviour
                     if (_live > 0)
                     {
                         Time.timeScale = 0;
+                        // _enemiesSpawner.KillEnemy(other);
                         _continuePanel.SetActive(true);
                         _live--;
                         _isHit = false;

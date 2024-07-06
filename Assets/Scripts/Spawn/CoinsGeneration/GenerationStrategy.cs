@@ -35,7 +35,9 @@ namespace Spawn.CoinsGeneration
     public abstract class StrategyBase
     {
         protected readonly Random Random = new();
-        public abstract void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos);
+
+        public abstract void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos,
+            GameObject tail = null);
     }
 
     // public class StreamLined : StrategyBase
@@ -55,7 +57,8 @@ namespace Spawn.CoinsGeneration
 
     public class MountainStrategy : StrategyBase
     {
-        public override void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos)
+        public override void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos,
+            GameObject tail)
         {
             var posX = Random.Next(-1, 2) * 3;
             var len = gameObjects.Count;
@@ -72,7 +75,8 @@ namespace Spawn.CoinsGeneration
 
     public class RiverStrategy : StrategyBase
     {
-        public override void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos)
+        public override void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos,
+            GameObject tail)
         {
             var posX = Random.Next(-1, 2) * 3;
             var len = gameObjects.Count;
@@ -90,13 +94,31 @@ namespace Spawn.CoinsGeneration
 
     public class PlainStrategy : StrategyBase
     {
-        public override void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos)
+        public override void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos,
+            GameObject tail)
         {
             var posX = Random.Next(-1, 2) * 3;
             var obstPos = 0;
             float y = 1;
+            var preCount = 0;
 
-            foreach (var coin in gameObjects)
+            if (tail != null)
+            {
+                var oldX = tail.transform.position.x;
+                if (tail.transform.position.y == 1f)
+                {
+                    while (oldX != posX)
+                    {
+                        oldX += oldX < posX ? 1 : -1;
+                        gameObjects[preCount].transform.position = new Vector3(oldX, y, roadPos);
+                        roadPos += 5;
+                        gameObjects[preCount].SetActive(true);
+                        preCount++;
+                    }
+                }
+            }
+
+            for (var i = preCount + 1; i < gameObjects.Count; i++)
             {
                 if (obstPos < obstacles.Count)
                 {
@@ -106,7 +128,7 @@ namespace Spawn.CoinsGeneration
                     // height = scale.y;
 
                     // obstacle is located approximately on posX
-                    if (position.x + scale.x / 2  >= posX)
+                    if (position.x + scale.x / 2 >= posX)
                     {
                         switch (distance)
                         {
@@ -131,9 +153,9 @@ namespace Spawn.CoinsGeneration
                     }
                 }
 
-                coin.transform.position = new Vector3(posX, y, roadPos);
+                gameObjects[i].transform.position = new Vector3(posX, y, roadPos);
                 roadPos += 5;
-                coin.SetActive(true);
+                gameObjects[i].SetActive(true);
             }
         }
     }
