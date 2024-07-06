@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0, g: 0, b: 0, a: 1}
+  m_IndirectSpecularColor: {r: 0.34992638, g: 0.66435707, b: 0.5691987, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1272,13 +1272,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 1172410460}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: fc771a78e3af0e24cbdc3ab8de8bcab6, type: 3}
+  m_Script: {fileID: 11500000, guid: a87a1fb4f74b72149bc1bab752e5a534, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesPrefabs:
-  - {fileID: 3071646101723998321, guid: 119e4765f5af04e4e8813b81a387a92f, type: 3}
-  - {fileID: 3071646101723998321, guid: 119e4765f5af04e4e8813b81a387a92f, type: 3}
-  - {fileID: 3071646101723998321, guid: 119e4765f5af04e4e8813b81a387a92f, type: 3}
+  - {fileID: 919132149155446097, guid: 9d56a7e4c6672c741b4bb22e99bea57f, type: 3}
 --- !u!4 &1172410462
 Transform:
   m_ObjectHideFlags: 0
@@ -1570,7 +1568,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1302242191}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 45ea1da6911654c44af9ec3b79b2553f, type: 3}
+  m_Script: {fileID: 11500000, guid: 1d54db9d326693740a84a5a03c4917fa, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _roadPrefabs:
@@ -1580,9 +1578,9 @@ MonoBehaviour:
   _asylumPrefabs:
   - {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
   _spawnPos: 0
-  _speed: 50
+  _speed: 30
   _scoreText: {fileID: 1670773816}
-  _roadLength: 200
+  _roadLength: 100
   _maxRoads: 10
   _activeRoads: 5
 --- !u!1 &1324613548 stripped
@@ -2102,7 +2100,7 @@ MonoBehaviour:
   m_GameObject: {fileID: 1868819324}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 5c1741b4acc04141ba5a58498e982738, type: 3}
+  m_Script: {fileID: 11500000, guid: e4ccdea8a8018cd49879f3a06531596e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   _coinPrefab: {fileID: 8165799971072073178, guid: c1ce36c48afdf3d4dbed321780d02560, type: 3}
@@ -2468,7 +2466,7 @@ PrefabInstance:
     - target: {fileID: 1803439894049070079, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: _generator
       value: 
-      objectReference: {fileID: 1302242194}
+      objectReference: {fileID: 0}
     - target: {fileID: 1803439894049070079, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: _jumpForce
       value: 20
@@ -2488,7 +2486,7 @@ PrefabInstance:
     - target: {fileID: 1803439894049070079, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: _roadSpawner
       value: 
-      objectReference: {fileID: 1302242194}
+      objectReference: {fileID: 0}
     - target: {fileID: 1803439894049070079, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: _timeShooting
       value: 10
@@ -2501,6 +2499,10 @@ PrefabInstance:
       propertyPath: _enemiesSpawner
       value: 
       objectReference: {fileID: 1172410461}
+    - target: {fileID: 1803439894049070079, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
+      propertyPath: _spawnController
+      value: 
+      objectReference: {fileID: 99717343}
     - target: {fileID: 1821749268001481402, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: m_Height
       value: 2.6092389

@@ -4,7 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="" />
+    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (1).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (1).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (4).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (4).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (5).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (5).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (6).prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube (6).prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Cube.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad2.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad2.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad3.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad3.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/initPrefab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/initPrefab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Move.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Move.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/RoadSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/RoadSpawner.cs" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -32,6 +50,10 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/02/200a66c8/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/26/eb3caa85/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/34/208157bf/Object.cs" root0="SKIP_HIGHLIGHTING" />
@@ -61,6 +83,8 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation@1.1.4/Editor/ConversionSystem/SystemConvertersEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/AssetIdRemapUtility/Editor/AssetIdRemapEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Editor/EditorCore/UVEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Runtime/MeshOperations/QuadUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/LayoutPropertiesPreview.cs" root0="SKIP_HIGHLIGHTING" />
@@ -167,10 +191,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="30004">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="30004" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -328,7 +352,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="bugfix/roadAndSpeed" />
+                        <option value="feature/resistance" />
                       </list>
                     </value>
                   </entry>
@@ -344,6 +368,11 @@
         <entry key="Branch">
           <value>
             <list>
+              <RecentGroup>
+                <option name="FILTER_VALUES">
+                  <option value="feature/resistance" />
+                </option>
+              </RecentGroup>
               <RecentGroup>
                 <option name="FILTER_VALUES">
                   <option value="bugfix/roadAndSpeed" />
@@ -397,39 +426,39 @@
       <breakpoints>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
-          <line>240</line>
+          <line>239</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" initialLine="200" containingFunctionPresentation="method 'Hit'">
             <startOffsets>
-              <option value="8300" />
+              <option value="8266" />
             </startOffsets>
             <endOffsets>
-              <option value="8335" />
+              <option value="8301" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
-          <line>244</line>
+          <line>243</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" initialLine="202" containingFunctionPresentation="method 'Hit'">
             <startOffsets>
-              <option value="8398" />
+              <option value="8364" />
             </startOffsets>
             <endOffsets>
-              <option value="8428" />
+              <option value="8394" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="22" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
-          <line>210</line>
+          <line>209</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" initialLine="179" containingFunctionPresentation="method 'Freeze'">
             <startOffsets>
-              <option value="7642" />
+              <option value="7608" />
             </startOffsets>
             <endOffsets>
-              <option value="7677" />
+              <option value="7643" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="28" />
@@ -460,7 +489,38 @@
           </properties>
           <option name="timeStamp" value="50" />
         </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/RoadSpawner.cs</url>
+          <line>57</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\RoadSpawner.cs" initialLine="58" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="1976" />
+            </startOffsets>
+            <endOffsets>
+              <option value="2138" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="53" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/RoadSpawner.cs</url>
+          <line>38</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\RoadSpawner.cs" initialLine="39" containingFunctionPresentation="method 'Start'">
+            <startOffsets>
+              <option value="1142" />
+            </startOffsets>
+            <endOffsets>
+              <option value="1177" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="56" />
+        </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
+    <watches-manager>
+      <configuration name="UNITY_DEBUG_RUN_CONFIGURATION">
+        <watch expression="transform.forward * _spawnPos" />
+      </configuration>
+    </watches-manager>
   </component>
 </project>
