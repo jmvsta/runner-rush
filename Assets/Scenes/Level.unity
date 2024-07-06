@@ -1276,7 +1276,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _enemiesPrefabs:
-  - {fileID: 919132149155446097, guid: 9d56a7e4c6672c741b4bb22e99bea57f, type: 3}
+  - {fileID: 3071646101723998321, guid: 119e4765f5af04e4e8813b81a387a92f, type: 3}
 --- !u!4 &1172410462
 Transform:
   m_ObjectHideFlags: 0
@@ -1577,10 +1577,9 @@ MonoBehaviour:
   - {fileID: 254297243477746020, guid: f9108fc3edb1721449a48f75b8972bca, type: 3}
   _asylumPrefabs:
   - {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
-  _spawnPos: 0
   _speed: 30
   _scoreText: {fileID: 1670773816}
-  _roadLength: 100
+  _roadLength: 200
   _maxRoads: 10
   _activeRoads: 5
 --- !u!1 &1324613548 stripped
