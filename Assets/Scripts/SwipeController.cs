@@ -2,24 +2,41 @@ using UnityEngine;
 
 public class SwipeController : MonoBehaviour
 {
-    public static bool Tap, SwipeLeft, SwipeRight, SwipeUp, SwipeDown;
-    private bool _isDragging = false;
+    private bool _isDragging;
     private Vector2 _startTouch, _swipeDelta;
+    public static Swipe CurrentSwipe = Swipe.None;
+    public static int SwipeValue;
+
+    public enum Swipe
+    {
+        SwipeLeft, SwipeRight, SwipeUp, SwipeDown, None
+    }
 
     private void Update()
     {
-        Tap = SwipeDown = SwipeUp = SwipeLeft = SwipeRight = false;
+        CurrentSwipe = Swipe.None;
 
         #region ΟΚ-βεπρθÿ
         if (Input.GetMouseButtonDown(0))
         {
-            Tap = true;
             _isDragging = true;
             _startTouch = Input.mousePosition;
         }
         else if (Input.GetMouseButtonUp(0))
         {
             Reset();
+        }
+        else if (Input.GetKeyDown(KeyCode.UpArrow))
+        {
+            CurrentSwipe = Swipe.SwipeUp;
+        }
+        else if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            CurrentSwipe = Swipe.SwipeRight;
+        }
+        else if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            CurrentSwipe = Swipe.SwipeLeft;
         }
         #endregion
 
@@ -28,7 +45,6 @@ public class SwipeController : MonoBehaviour
         {
             if (Input.touches[0].phase == TouchPhase.Began)
             {
-                Tap = true;
                 _isDragging = true;
                 _startTouch = Input.touches[0].position;
             }
@@ -54,19 +70,11 @@ public class SwipeController : MonoBehaviour
             float y = _swipeDelta.y;
             if (Mathf.Abs(x) > Mathf.Abs(y))
             {
-
-                if (x < 0)
-                    SwipeLeft = true;
-                else
-                    SwipeRight = true;
+                CurrentSwipe = x < 0 ? Swipe.SwipeLeft : Swipe.SwipeRight;
             }
             else
             {
-
-                if (y < 0)
-                    SwipeDown = true;
-                else
-                    SwipeUp = true;
+                CurrentSwipe = y < 0 ? Swipe.SwipeDown : Swipe.SwipeUp;
             }
 
             Reset();
