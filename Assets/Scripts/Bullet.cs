@@ -6,7 +6,6 @@ using UnityEngine;
 public class Bullet : MonoBehaviour
 {
     [SerializeField] private EnemiesSpawner _enemiesSpawner;
-    [SerializeField] private ObstaclesSpawner _obstaclesSpawner;
     [SerializeField] private float life = 10;
 
     void Awake()
@@ -18,7 +17,6 @@ public class Bullet : MonoBehaviour
     void Start()
     {
         _enemiesSpawner = GameObject.Find("EnemiesSpawner").GetComponent<EnemiesSpawner>();
-        _obstaclesSpawner = GameObject.Find("ObstaclesSpawner").GetComponent <ObstaclesSpawner>();
     }
 
         private void OnTriggerEnter(Collider other)
@@ -26,7 +24,6 @@ public class Bullet : MonoBehaviour
         switch (other.gameObject.tag)
         {
             case "Died":
-                //_obstaclesSpawner.KillEnemy(other);
                 _enemiesSpawner.KillEnemy(other);
                 Destroy(gameObject);
                 break;

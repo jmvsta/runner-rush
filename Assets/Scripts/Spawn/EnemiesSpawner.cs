@@ -36,8 +36,7 @@ namespace Spawn
         public void KillEnemy(Collider other)
         {
             var enemy = other.transform.parent.gameObject.transform.parent.gameObject;
-            var place = new Vector3(enemy.transform.position.x, 2, 0);
-            var explosion = _explosionsSpawner.GenerateExplosion(place, ExplosionsSpawner.ExplosionType.Enemy);
+            var explosion = _explosionsSpawner.GenerateExplosion(enemy.transform.position, ExplosionsSpawner.ExplosionType.Enemy);
             enemy.SetActive(false);
             StartCoroutine(ExplosionsSpawner.DisableExplosionDelay(explosion));
         }
