@@ -15,7 +15,7 @@ GameObject:
   - component: {fileID: 9062343500578756677}
   m_Layer: 0
   m_Name: Cube (6)
-  m_TagString: Hit
+  m_TagString: Died
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
