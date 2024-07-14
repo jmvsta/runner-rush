@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.34992638, g: 0.66435707, b: 0.5691987, a: 1}
+  m_IndirectSpecularColor: {r: 0.35508883, g: 0.6667901, b: 0.5730638, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -711,7 +711,7 @@ Transform:
   m_GameObject: {fileID: 705507993}
   serializedVersion: 2
   m_LocalRotation: {x: 0.42261827, y: 0, z: 0, w: 0.9063079}
-  m_LocalPosition: {x: 0, y: 3, z: 0}
+  m_LocalPosition: {x: 0, y: 3.83, z: -0.7}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1425,11 +1425,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1197198833}
   m_CullTransparentMesh: 1
---- !u!1 &1214993595 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 5007376215318541289, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
-  m_PrefabInstance: {fileID: 8036450042034898391}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &1225863668
 GameObject:
   m_ObjectHideFlags: 0
@@ -2457,7 +2452,7 @@ PrefabInstance:
     - target: {fileID: 1803439894049070079, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: _shooting
       value: 
-      objectReference: {fileID: 1214993595}
+      objectReference: {fileID: 0}
     - target: {fileID: 1803439894049070079, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: _coinsText
       value: 

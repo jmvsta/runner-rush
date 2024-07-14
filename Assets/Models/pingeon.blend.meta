@@ -1,23 +1,13 @@
 fileFormatVersion: 2
-guid: 815aa087eb82a3f41a47fadd1cf1a222
+guid: 17e97752071f39044bf3fbcd685deba5
 ModelImporter:
   serializedVersion: 22200
   internalIDToNameTable: []
-  externalObjects:
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: BLACK_PLSTC
-    second: {fileID: 2100000, guid: 2fc473f33929d6342bb0a0caafda38d6, type: 2}
-  - first:
-      type: UnityEngine:Material
-      assembly: UnityEngine.CoreModule
-      name: PINK_PLSTC
-    second: {fileID: 2100000, guid: 2c75a8c9228e704459fac1938ae408a7, type: 2}
+  externalObjects: {}
   materials:
     materialImportMode: 2
     materialName: 0
-    materialSearch: 0
+    materialSearch: 1
     materialLocation: 1
   animations:
     legacyGenerateAnimations: 4
