@@ -30,7 +30,7 @@ namespace Spawn
 
         void Start()
         {
-            float _spawnPos = 0;
+            float spawnPos = 0;
             if (_asylumPrefabs.Length > _activeRoads)
             {
                 throw new Exception("Cannot have init prefabs more than active roads");
@@ -48,18 +48,18 @@ namespace Spawn
                 else if (i < _asylumPrefabs.Length)
                 {
                     _prev = Instantiate(_asylumPrefabs[i],
-                        transform.forward * _spawnPos, Quaternion.identity);
+                        transform.forward * spawnPos, Quaternion.identity);
                     _prev.SetActive(true);
-                    _spawnPos += _roadLength;
+                    spawnPos += _roadLength;
                 }
                 else
                 {
                     // TODO: to replace with SpawnRoad call
                     var initializedRoad = Instantiate(_roadPrefabs[Random.Range(0, _roadPrefabs.Length)],
-                        transform.forward * _spawnPos, Quaternion.identity);
+                        transform.forward * spawnPos, Quaternion.identity);
                     initializedRoad.SetActive(true);
                     // _coinsSpawner.GenerateCoins(_spawnPos - 50);
-                    _spawnPos += _roadLength;
+                    spawnPos += _roadLength;
                     _roads.Add(initializedRoad);
                 }
             }
