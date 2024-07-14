@@ -1,3 +1,4 @@
+using System;
 using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
@@ -22,6 +23,7 @@ public class PlayerController : MonoBehaviour
     private CharacterController _characterController;
     private Vector3 _dir;
     private int _lineToMove = 1;
+    private bool _highJump;
     private bool _isHit;
     private bool _isShield;
     private static readonly int IsHit = Animator.StringToHash("isHit");
@@ -34,10 +36,10 @@ public class PlayerController : MonoBehaviour
     private float _dragCoefficient = 1.1f;
     private float _crossSectionalArea = 0.5f;
     private float _mass = 60;
-    private float _prevSpeed;
-    public float swipeThreshold = 50f;
+    private float _cachedSpeed;
     private Vector2 _touchStartPos;
     private Vector2 _touchEndPos;
+    private AudioSource _jumpAudioSource;
     
     void Start()
     {
@@ -47,50 +49,44 @@ public class PlayerController : MonoBehaviour
         _animator = GetComponent<Animator>();
         _spawnController = GameObject.Find("SpawnController").GetComponent<SpawnController>();
         _roadSpawner = GameObject.Find("RoadSpawner").GetComponent<RoadSpawner>();
-        _prevSpeed = _roadSpawner.Speed;
+        _cachedSpeed = _roadSpawner.Speed;
+        _jumpAudioSource = GameObject.Find("JumpAudioSource").GetComponent<AudioSource>();
     }
 
     private void Update()
     {
         if (_lossPanel.activeSelf || _continuePanel.activeSelf) return;
 
-        if ((SwipeController.SwipeRight || Input.GetKeyDown(KeyCode.RightArrow)) && _lineToMove < 2)
+        switch (SwipeController.CurrentSwipe)
         {
-            _lineToMove++;
-        }
-        else if ((SwipeController.SwipeLeft || Input.GetKeyDown(KeyCode.LeftArrow)) && _lineToMove > 0)
-        {
-            _lineToMove--;
-        }
-        else if ((Input.touchCount > 0 || Input.GetKeyDown(KeyCode.UpArrow)) && _characterController.isGrounded && _roadSpawner.Speed >= _prevSpeed)
-        {
-            Touch touch = Input.GetTouch(0);
-
-            if (touch.phase == TouchPhase.Began)
-            {
-                _touchStartPos = touch.position;
-            }
-            else if (touch.phase == TouchPhase.Ended)
-            {
-                _touchEndPos = touch.position;
-                var swipeValue = _touchEndPos.y - _touchStartPos.y;
-
-                if (Mathf.Abs(swipeValue) > swipeThreshold)
+            case SwipeController.Swipe.SwipeLeft:
+                if (_lineToMove > 0) _lineToMove--;
+                break;
+            case SwipeController.Swipe.SwipeRight:
+                if (_lineToMove < 2)  _lineToMove++;
+                break;
+            case SwipeController.Swipe.SwipeUp:
+                if (_characterController.isGrounded)
                 {
-                    switch (Mathf.Abs(swipeValue))
-                    {
-                        case <= 250:
-                            Jump(10);
-                            break;
-                        case > 250 and <= 500:
-                            Jump(15);
-                            break;
-                        case >= 500:
-                            Jump(20);
-                            break;
-                    }
+                    _highJump = true;
+                    Jump(15);
                 }
-            }
+                else if (_highJump)
+                {
+                    _highJump = false;
+                    Jump(20);
+                }
+                break;
+            case SwipeController.Swipe.SwipeDown:
+                break;
+            case SwipeController.Swipe.None:
+                break;
+            default:
+                if (Input.touchCount > 0 && _characterController.isGrounded && _roadSpawner.Speed >= _cachedSpeed)
+                {
+                    Jump(SwipeController.SwipeValue <= 500 ? 15 : 20);
+                }
+                break;
         }
 
         Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
@@ -121,7 +117,7 @@ public class PlayerController : MonoBehaviour
                 _dragCoefficient * _crossSectionalArea / _mass;
             _roadSpawner.Speed -= accelerationDueToDrag * Time.fixedDeltaTime;
         }
-        else if (_roadSpawner.Speed < _prevSpeed)
+        else if (_roadSpawner.Speed < _cachedSpeed)
         {
             _roadSpawner.Speed++;
         }
@@ -132,7 +128,7 @@ public class PlayerController : MonoBehaviour
 
     private void Jump(float jumpForce)
     {
-        _prevSpeed = _roadSpawner.Speed;
+        _jumpAudioSource.Play();
         _dir.y = jumpForce;
     }
 
