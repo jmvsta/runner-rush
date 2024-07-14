@@ -18,6 +18,9 @@ public class PlayerController : MonoBehaviour
     [SerializeField] private float _timeShield = 10f;
     [SerializeField] private float _timeShooting = 10f;
     [SerializeField] private int _live;
+    [SerializeField] private Transform bulletSpawnPosition;
+    [SerializeField] private GameObject bulletPrefab;
+    [SerializeField] float bulletSpeed = 10;
     private RoadSpawner _roadSpawner;
     private Animator _animator;
     private CharacterController _characterController;
@@ -253,11 +256,12 @@ public class PlayerController : MonoBehaviour
 
     IEnumerator Shooting(float time)
     {
-        _animator.SetTrigger(StartShooting);
-
-        yield return new WaitForSeconds(time - 2f);
-        _animator.SetTrigger(IsShooting);
-
-        yield return new WaitForSeconds(2f);
+        while (time > 0)
+        {
+            var bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, bulletSpawnPosition.rotation);
+            bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPosition.forward * bulletSpeed;
+            time -= 0.7f;
+            yield return new WaitForSeconds(0.7f);
+        }
     }
 }
