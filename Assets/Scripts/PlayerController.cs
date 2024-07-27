@@ -77,7 +77,7 @@ public class PlayerController : MonoBehaviour
                 else if (_highJump)
                 {
                     _highJump = false;
-                    Jump(20);
+                    Jump(10);
                 }
                 break;
             case SwipeController.Swipe.SwipeDown:

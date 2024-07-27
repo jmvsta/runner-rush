@@ -1624,7 +1624,7 @@ AudioSource:
   SpatializePostEffects: 0
   Priority: 128
   DopplerLevel: 1
-  MinDistance: 1
+  MinDistance: 0.9784031
   MaxDistance: 500
   Pan2D: 0
   rolloffMode: 2
@@ -2230,7 +2230,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e4ccdea8a8018cd49879f3a06531596e, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _coinPrefab: {fileID: 8165799971072073178, guid: c1ce36c48afdf3d4dbed321780d02560, type: 3}
+  _coinPrefab: {fileID: 7644670970476451958, guid: 6079a60a34da2ae4c891227db5dee316, type: 3}
 --- !u!4 &1868819326
 Transform:
   m_ObjectHideFlags: 0
