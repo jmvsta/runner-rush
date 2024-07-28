@@ -5,16 +5,19 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_14_2024_3_06_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/shelf/Uncommitted_changes_before_Checkout_at_7_14_2024_3_06_PM__Changes_.xml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/shelf/Uncommitted_changes_before_Merge_at_7_14_2024_3_42_PM_[Changes]/shelved.patch" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/shelf/Uncommitted_changes_before_Merge_at_7_14_2024_3_42_PM__Changes_.xml" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Coin.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Coin.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/caplsule.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/caplsule.blend1" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/caplsule.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/caplsule.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectSettings.asset" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -224,6 +227,8 @@
       <workItem from="1720910571839" duration="11038000" />
       <workItem from="1721516147488" duration="1726000" />
       <workItem from="1722010273601" duration="727000" />
+      <workItem from="1722082159901" duration="8737000" />
+      <workItem from="1722178076933" duration="622000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
@@ -356,7 +361,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720965976096</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="second jump x1.5 from first. added capsule model with animation, but respawning not correctly. added character model but without animation">
+      <created>1722082265896</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1722082265896</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -447,7 +459,8 @@
     <MESSAGE value="added scales" />
     <MESSAGE value="crab with no camera" />
     <MESSAGE value="merge" />
-    <option name="LAST_COMMIT_MESSAGE" value="merge" />
+    <MESSAGE value="second jump x1.5 from first. added capsule model with animation, but respawning not correctly. added character model but without animation" />
+    <option name="LAST_COMMIT_MESSAGE" value="second jump x1.5 from first. added capsule model with animation, but respawning not correctly. added character model but without animation" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -457,15 +470,15 @@
           <line>130</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\CoinsGeneration\GenerationStrategy.cs" initialLine="111" containingFunctionPresentation="method 'Apply'">
             <startOffsets>
-              <option value="4261" />
+              <option value="4288" />
             </startOffsets>
             <endOffsets>
-              <option value="4298" />
+              <option value="4325" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs</url>
           <line>18</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" initialLine="18" containingFunctionPresentation="method 'Start'">
@@ -478,7 +491,7 @@
           </properties>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs</url>
           <line>31</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" initialLine="31" containingFunctionPresentation="method 'GenerateObstacles'">
@@ -491,7 +504,7 @@
           </properties>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs</url>
           <line>37</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" initialLine="37" containingFunctionPresentation="method 'GenerateObstacles'">
@@ -503,6 +516,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="75" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
+          <line>194</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" initialLine="194" containingFunctionPresentation="method 'OnTriggerEnter'">
+            <startOffsets>
+              <option value="6695" />
+            </startOffsets>
+            <endOffsets>
+              <option value="6704" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="76" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
