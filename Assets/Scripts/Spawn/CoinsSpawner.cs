@@ -25,13 +25,11 @@ namespace Spawn
                 _coins.Add(initializedCoin);
             }
         }
-
-        // TODO: generation depending on obstacles, also maybe static enemies
+        
         public void GenerateCoins(List<GameObject> obstacles, float roadPos)
         {
-            // Fabric.GetStrategy((Strategy)Random.Next(0, 3))
             var coinsToActivateList = _coins.FindAll(r => !r.activeSelf).Take(_coinsBatchSize).ToList();
-            Fabric.GetStrategy(0).Apply(coinsToActivateList, obstacles, roadPos, _tail);
+            Fabric.GetStrategy(3).Apply(coinsToActivateList, obstacles, roadPos, _tail);
             _tail = coinsToActivateList[^1];
         }
 

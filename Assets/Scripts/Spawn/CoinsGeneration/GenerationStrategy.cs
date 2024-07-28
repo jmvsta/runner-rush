@@ -11,7 +11,7 @@ namespace Spawn.CoinsGeneration
         Plain = 0,
         Mountain = 1,
         River = 2,
-        // StreamLined = 3
+        SimpleIgnoreStrategy = 3
     }
 
     public static class Fabric
@@ -23,12 +23,12 @@ namespace Spawn.CoinsGeneration
             { Strategy.Plain, DefaultStrategy },
             { Strategy.Mountain, new MountainStrategy() },
             { Strategy.River, new RiverStrategy() },
-            // { Strategy.StreamLined, new StreamLined() }
+            { Strategy.SimpleIgnoreStrategy, new SimpleIgnoreStrategy() }
         };
 
-        public static StrategyBase GetStrategy(Strategy strategy)
+        public static StrategyBase GetStrategy(int strategy)
         {
-            return StrategyMap.GetValueOrDefault(strategy, DefaultStrategy);
+            return StrategyMap.GetValueOrDefault((Strategy) strategy, DefaultStrategy);
         }
     }
 
@@ -154,6 +154,35 @@ namespace Spawn.CoinsGeneration
                 }
 
                 gameObjects[i].transform.position = new Vector3(posX, y, roadPos);
+                roadPos += 5;
+                gameObjects[i].SetActive(true);
+            }
+        }
+    }
+
+    public class SimpleIgnoreStrategy : StrategyBase
+    {
+        public override void Apply(List<GameObject> gameObjects, List<GameObject> obstacles, float roadPos,
+            GameObject tail)
+        {
+            var posX = Random.Next(-1, 2) * 3;
+            using var enumerator = obstacles.GetEnumerator();
+            GameObject obstacle = null;
+            if (enumerator.MoveNext())
+            {
+                obstacle = enumerator.Current;
+            }
+
+            for (var i = 1; i < gameObjects.Count; i++)
+            {
+                if (obstacle != null && Math.Abs(posX - obstacle.transform.position.x) < 3 &&
+                    Math.Abs(roadPos - obstacle.transform.position.z) <= 5)
+                {
+                    roadPos += 5;
+                    obstacle = enumerator.MoveNext() ? enumerator.Current : null;
+                    continue;
+                }
+                gameObjects[i].transform.position = new Vector3(posX, 1, roadPos);
                 roadPos += 5;
                 gameObjects[i].SetActive(true);
             }
