@@ -4,20 +4,14 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="">
+    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="pill 2">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Coin.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Coin.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Player.controller" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/caplsule.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.blend1" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/caplsule.blend1" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Bullet.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Hit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Hit.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/caplsule.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/caplsule.prefab.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -46,6 +40,12 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/02/200a66c8/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/26/eb3caa85/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/2a/2a3204ec/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
@@ -76,9 +76,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d303c2bf72cd4cec95665b89c457d265d2b8ef3ed6da17cd4f85587c2f9de7/System.Linq.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/Bullet.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Prefabs/Bullet.prefab" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scenes/Level.unity" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation@1.1.4/Editor/ConversionSystem/SystemConvertersEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/AssetIdRemapUtility/Editor/AssetIdRemapEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Editor/EditorCore/RepairActions.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Editor/EditorCore/UVEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Runtime/MeshOperations/QuadUtility.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/LayoutPropertiesPreview.cs" root0="SKIP_HIGHLIGHTING" />
@@ -186,10 +190,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="35856">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" />
+      <option name="pid" value="35856" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -228,7 +232,7 @@
       <workItem from="1721516147488" duration="1726000" />
       <workItem from="1722010273601" duration="727000" />
       <workItem from="1722082159901" duration="8737000" />
-      <workItem from="1722178076933" duration="622000" />
+      <workItem from="1722178076933" duration="5322000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
@@ -368,7 +372,21 @@
       <option name="project" value="LOCAL" />
       <updated>1722082265896</updated>
     </task>
-    <option name="localTasksCounter" value="20" />
+    <task id="LOCAL-00020" summary="pill model">
+      <created>1722179499924</created>
+      <option name="number" value="00020" />
+      <option name="presentableId" value="LOCAL-00020" />
+      <option name="project" value="LOCAL" />
+      <updated>1722179499924</updated>
+    </task>
+    <task id="LOCAL-00021" summary="pill 2">
+      <created>1722179507743</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1722179507743</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -460,7 +478,9 @@
     <MESSAGE value="crab with no camera" />
     <MESSAGE value="merge" />
     <MESSAGE value="second jump x1.5 from first. added capsule model with animation, but respawning not correctly. added character model but without animation" />
-    <option name="LAST_COMMIT_MESSAGE" value="second jump x1.5 from first. added capsule model with animation, but respawning not correctly. added character model but without animation" />
+    <MESSAGE value="pill model" />
+    <MESSAGE value="pill 2" />
+    <option name="LAST_COMMIT_MESSAGE" value="pill 2" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -517,18 +537,57 @@
           </properties>
           <option name="timeStamp" value="75" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/PlayerController.cs</url>
           <line>194</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" initialLine="194" containingFunctionPresentation="method 'OnTriggerEnter'">
             <startOffsets>
-              <option value="6695" />
+              <option value="6624" />
             </startOffsets>
             <endOffsets>
-              <option value="6704" />
+              <option value="6633" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="76" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Shooting.cs</url>
+          <line>11</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Shooting.cs" initialLine="11" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="311" />
+            </startOffsets>
+            <endOffsets>
+              <option value="346" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="77" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Shooting.cs</url>
+          <line>13</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Shooting.cs" initialLine="13" containingFunctionPresentation="method 'Update'">
+            <startOffsets>
+              <option value="369" />
+            </startOffsets>
+            <endOffsets>
+              <option value="468" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="78" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2a152c15da574a70b6653d9f1dbcd10652000/82/15e87e4e/Command.cs</url>
+          <line>130</line>
+          <properties documentPath="C:\Users\dmitr\AppData\Roaming\JetBrains\Rider2022.1\resharper-host\DecompilerCache\decompiler\2a152c15da574a70b6653d9f1dbcd10652000\82\15e87e4e\Command.cs" initialLine="130" containingFunctionPresentation="method 'WaitForProgramToRun'">
+            <startOffsets>
+              <option value="4165" />
+            </startOffsets>
+            <endOffsets>
+              <option value="4213" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="79" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>

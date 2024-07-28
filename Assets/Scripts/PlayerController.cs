@@ -33,8 +33,6 @@ public class PlayerController : MonoBehaviour
     private static readonly int StartHited = Animator.StringToHash("startHited");
     private static readonly int StartShielded = Animator.StringToHash("startShielded");
     private static readonly int IsShielded = Animator.StringToHash("isShielded");
-    private static readonly int StartShooting = Animator.StringToHash("startShooting");
-    private static readonly int IsShooting = Animator.StringToHash("isShooting");
     private float _airDensity = 1.225f;
     private float _dragCoefficient = 1.1f;
     private float _crossSectionalArea = 0.5f;
@@ -150,9 +148,10 @@ public class PlayerController : MonoBehaviour
                 }
                 else if (_live > 0)
                 {
-                    StartCoroutine(ActivatePanel(_continuePanel));
                     _enemiesSpawner.KillEnemy(other);
+                    StartCoroutine(ActivatePanel(_continuePanel));
                     _live--;
+                    Debug.Log("Died " + _live);
                 }
                 else
                 {
@@ -212,7 +211,7 @@ public class PlayerController : MonoBehaviour
 
     private IEnumerator ActivatePanel(GameObject panel)
     {
-        yield return new WaitForSeconds(1);
+        yield return new WaitForSeconds(0.3f);
         panel.SetActive(true);
         Time.timeScale = 0;
     }
@@ -258,7 +257,8 @@ public class PlayerController : MonoBehaviour
     {
         while (time > 0)
         {
-            var bullet = Instantiate(bulletPrefab, bulletSpawnPosition.position, bulletSpawnPosition.rotation);
+            var position = bulletSpawnPosition.position;
+            var bullet = Instantiate(bulletPrefab, position, bulletSpawnPosition.rotation);
             bullet.GetComponent<Rigidbody>().velocity = bulletSpawnPosition.forward * bulletSpeed;
             time -= 0.7f;
             yield return new WaitForSeconds(0.7f);

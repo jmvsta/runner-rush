@@ -32,7 +32,7 @@ namespace Spawn
             activeObstacles.ForEach(obstacle =>
             {
                 roadPos += 20;
-                obstacle.transform.position = new Vector3(_random.Next(-1, 2) * 5, 0, roadPos);
+                obstacle.transform.position = new Vector3(_random.Next(-1, 2) * 3, 0, roadPos);
                 obstacle.SetActive(true);
             });
             return activeObstacles;

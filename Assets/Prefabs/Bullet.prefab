@@ -47,6 +47,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8c3a3ac7af1236d40acd3a72248e06f3, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  _enemiesSpawner: {fileID: 0}
   life: 10
 --- !u!54 &8334074272422066190
 Rigidbody:
