@@ -10,6 +10,8 @@ GameObject:
   m_Component:
   - component: {fileID: 1437003239035994795}
   - component: {fileID: 5576301962653600014}
+  - component: {fileID: -4520279337141645847}
+  - component: {fileID: 8040062773290825238}
   m_Layer: 0
   m_Name: Hit
   m_TagString: Died
@@ -46,6 +48,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 0f66edcff5c19104f908df11bd5fc40a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+--- !u!114 &-4520279337141645847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673100905398225416}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9fc92aca8d45f8641880e7d8b7603ef6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!65 &8040062773290825238
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 673100905398225416}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Size: {x: 5.11, y: 5.12, z: 0.97}
+  m_Center: {x: 0.0000000435634, y: 1, z: -1.87}
 --- !u!1 &1440364137632287732
 GameObject:
   m_ObjectHideFlags: 0

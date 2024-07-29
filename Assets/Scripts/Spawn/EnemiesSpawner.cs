@@ -33,13 +33,12 @@ namespace Spawn
             return enemyToActivate;
         }
 
-        public void KillEnemy(Collider other)
-        {
-            var enemy = other.transform.parent.gameObject.transform.parent.gameObject;
-            var explosion = _explosionsSpawner.GenerateExplosion(enemy.transform.position, ExplosionsSpawner.ExplosionType.Enemy);
-            enemy.SetActive(false);
-            StartCoroutine(ExplosionsSpawner.DisableExplosionDelay(explosion));
-        }
+        // public void KillEnemy(Collider other)
+        // {
+        //     var enemy = other.transform.parent.gameObject.transform.parent.gameObject;
+        //     ExplosionsSpawner.GenerateExplosion(enemy.transform.position, ExplosionsSpawner.ExplosionType.Enemy);
+        //     enemy.SetActive(false);
+        // }
 
         void Update()
         {

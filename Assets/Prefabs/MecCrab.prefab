@@ -1565,6 +1565,8 @@ GameObject:
   m_Component:
   - component: {fileID: 9014170860914655511}
   - component: {fileID: 7411263424004167388}
+  - component: {fileID: 7212023768012111965}
+  - component: {fileID: 5728945083229560476}
   m_Layer: 0
   m_Name: MecCrab
   m_TagString: Block
@@ -1599,6 +1601,41 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 0f66edcff5c19104f908df11bd5fc40a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!136 &7212023768012111965
+CapsuleCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3071646101723998321}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 1
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Radius: 0.97
+  m_Height: 1
+  m_Direction: 1
+  m_Center: {x: -0.07, y: 1.09, z: 0}
+--- !u!114 &5728945083229560476
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3071646101723998321}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 767239415321a8d46a1a9da61928aaba, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1 &3384185997298674916
@@ -2077,7 +2114,7 @@ MeshRenderer:
   m_RenderingLayerMask: 1
   m_RendererPriority: 0
   m_Materials:
-  - {fileID: -2371354136615007893, guid: 9d56a7e4c6672c741b4bb22e99bea57f, type: 3}
+  - {fileID: 2100000, guid: 4422e77726f1c3d4994bd0f4db56701d, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0

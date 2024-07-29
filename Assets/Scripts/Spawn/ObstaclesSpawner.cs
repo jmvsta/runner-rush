@@ -40,7 +40,7 @@ namespace Spawn
 
         void Update()
         {
-            _obstacles.FindAll(r => r.activeSelf && r.transform.position.z < -10).ForEach(r => r.SetActive(false));
+            // _obstacles.FindAll(r => r.activeSelf && r.transform.position.z < -10).ForEach(r => r.SetActive(false));
         }
     }
 }

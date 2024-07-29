@@ -43,12 +43,13 @@ namespace Spawn
             var explosionToActivate = disabledExplosions[Random.Range(0, disabledExplosions.Count)];
             explosionToActivate.transform.position = vector;
             explosionToActivate.SetActive(true);
+            StartCoroutine(DisableExplosionDelay(explosionToActivate));
             return explosionToActivate;
         }
 
         public static IEnumerator DisableExplosionDelay(GameObject gameObject)
         {
-            yield return new WaitForSeconds(2);
+            yield return new WaitForSeconds(0.3f);
             gameObject.SetActive(false);
         }
     }
