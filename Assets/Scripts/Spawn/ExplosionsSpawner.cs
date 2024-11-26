@@ -12,7 +12,6 @@ namespace Spawn
         [SerializeField] private GameObject[] _explosionPrefabs;
         private readonly Dictionary<ExplosionType, List<GameObject>> _explosions = new();
         private int _explosionsSize = 10;
-        public Dictionary<ExplosionType, List<GameObject>> Explosions => _explosions;
 
         public enum ExplosionType
         {
@@ -36,7 +35,7 @@ namespace Spawn
             }
         }
 
-        public GameObject GenerateExplosion(Vector3 vector, ExplosionType explosionType)
+        public void GenerateExplosion(Vector3 vector, ExplosionType explosionType)
         {
             var explosions = _explosions.GetValueOrDefault(explosionType, new List<GameObject>());
             var disabledExplosions = explosions.FindAll(r => r.activeSelf == false);
@@ -44,7 +43,6 @@ namespace Spawn
             explosionToActivate.transform.position = vector;
             explosionToActivate.SetActive(true);
             StartCoroutine(DisableExplosionDelay(explosionToActivate));
-            return explosionToActivate;
         }
 
         public static IEnumerator DisableExplosionDelay(GameObject gameObject)

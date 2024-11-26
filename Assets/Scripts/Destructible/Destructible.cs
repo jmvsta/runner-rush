@@ -3,7 +3,7 @@ using UnityEngine;
 
 namespace Destructible
 {
-    public class Destructible : MonoBehaviour
+    public abstract class Destructible : MonoBehaviour
     {
         protected ExplosionsSpawner ExplosionsSpawner;
         
@@ -11,5 +11,7 @@ namespace Destructible
         {
             ExplosionsSpawner = GameObject.Find("ExplosionsSpawner").GetComponent<ExplosionsSpawner>();
         }
+
+        public abstract void OnChildTriggerEnter(Collider other, ChildTrigger childTrigger);
     }
 }

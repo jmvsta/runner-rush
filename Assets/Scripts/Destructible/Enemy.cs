@@ -5,13 +5,19 @@ namespace Destructible
 {
     public class Enemy : Destructible
     {
-        private void OnTriggerEnter(Collider other)
+        public override void OnChildTriggerEnter(Collider other, ChildTrigger childTrigger)
         {
-            // var enemy = other.transform.parent.gameObject.transform.parent.gameObject;
-            Debug.Log("Destroy enemy");
-            ExplosionsSpawner.GenerateExplosion(gameObject.transform.position,
-                ExplosionsSpawner.ExplosionType.Enemy);
-            gameObject.SetActive(false);
+            switch (childTrigger.gameObject.tag)
+            {
+                case "Died":  
+                    ExplosionsSpawner.GenerateExplosion(gameObject.transform.position, ExplosionsSpawner.ExplosionType.Enemy);
+                    gameObject.SetActive(false);
+                    break;
+                case "Hit":
+                default:
+                    break;
+            }
+            
         }
     }
 }

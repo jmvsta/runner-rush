@@ -95,6 +95,7 @@ GameObject:
   - component: {fileID: 911834480443334934}
   - component: {fileID: 5785082057783129819}
   - component: {fileID: 900332086456608152}
+  - component: {fileID: 6120856405006831048}
   m_Layer: 0
   m_Name: pill_gv
   m_TagString: Coin
@@ -175,6 +176,19 @@ CapsuleCollider:
   m_Height: 5.84
   m_Direction: 0
   m_Center: {x: 0.07, y: 0.91, z: -0.04}
+--- !u!114 &6120856405006831048
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5777660434342815083}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fabe1a8cb54b423f92251845374c44aa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  _coinsText: {fileID: 0}
 --- !u!1 &9106775981954137900
 GameObject:
   m_ObjectHideFlags: 0

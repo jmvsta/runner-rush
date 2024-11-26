@@ -5,13 +5,19 @@ namespace Destructible
 {
     public class Wall : Destructible
     {
-        private void OnTriggerEnter(Collider other)
+        public override void OnChildTriggerEnter(Collider other, ChildTrigger childTrigger)
         {
-            Debug.Log("Destroy enemy");
-            // var enemy = other.transform.parent.gameObject.transform.parent.gameObject;
-            ExplosionsSpawner.GenerateExplosion(gameObject.transform.position,
-                ExplosionsSpawner.ExplosionType.Wall);
-            gameObject.SetActive(false);
+            switch (childTrigger.gameObject.tag)
+            {
+                case "Died":
+                    ExplosionsSpawner.GenerateExplosion(gameObject.transform.position,
+                        ExplosionsSpawner.ExplosionType.Wall);
+                    gameObject.SetActive(false);
+                    break;
+                case "Hit":
+                default:
+                    break;
+            }
         }
     }
 }

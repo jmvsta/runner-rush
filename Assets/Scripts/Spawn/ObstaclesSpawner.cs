@@ -24,8 +24,7 @@ namespace Spawn
                 _obstacles.Add(initializedObstacle);
             }
         }
-
-        // TODO: more complicated generation of obstacles
+        
         public List<GameObject> GenerateObstacles(float roadPos)
         {
             var activeObstacles = _obstacles.FindAll(r => !r.activeSelf).Take(_genCount).ToList();
@@ -40,7 +39,7 @@ namespace Spawn
 
         void Update()
         {
-            // _obstacles.FindAll(r => r.activeSelf && r.transform.position.z < -10).ForEach(r => r.SetActive(false));
+            _obstacles.FindAll(r => r.activeSelf && r.transform.position.z < -10).ForEach(r => r.SetActive(false));
         }
     }
 }

@@ -5,20 +5,72 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/encodings.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/ChildTrigger.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/ChildTrigger.cs.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Coin.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Coin.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Horror Assets/Materials/RockingChair_Mat.mat" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Horror Assets/Materials/RockingChair_Mat.mat" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/psyhoSky.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Materials/psyhoSky.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Mandelbrot_full_gradient.gif" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Mandelbrot_full_gradient.gif.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/BLACK_PLSTC.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/BLACK_PLSTC.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material #9.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material #9.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material White.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material White.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material metalic black.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material metalic black.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material metalic red.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material metalic red.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.001.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.001.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.002.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.002.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.004.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.004.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.005.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.005.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/PINK_PLSTC.mat" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/PINK_PLSTC.mat.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.blend1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.blend1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.blend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.blend1" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.blend1.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.fbx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.fbx.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/newOctoB.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/newOctoB.blend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/octo_blend.blend" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/octo_blend.blend.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/право.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/право.jpg.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Hit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Hit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Bullet.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Bullet.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/PlayerController.cs.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs.meta" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pill_gv.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pill_gv.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Bullet.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Destructible.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Wall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/EnemiesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/EnemiesSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/ExplosionsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/ExplosionsSpawner.cs" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -47,6 +99,7 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/CGIncludes/UnityShaderVariables.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/02/200a66c8/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/26/eb3caa85/GameObject.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/2a/2a3204ec/KeyCode.cs" root0="SKIP_HIGHLIGHTING" />
@@ -77,7 +130,9 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d303c2bf72cd4cec95665b89c457d265d2b8ef3ed6da17cd4f85587c2f9de7/System.Linq.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Materials/psyhoSky.mat.meta" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation@1.1.4/Editor/ConversionSystem/SystemConvertersEditor.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.24/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/AssetIdRemapUtility/Editor/AssetIdRemapEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.probuilder@5.1.1/Editor/EditorCore/RepairActions.cs" root0="SKIP_HIGHLIGHTING" />
@@ -130,7 +185,8 @@
     &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
     &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
     &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4945946&quot;,
-    &quot;git-widget-placeholder&quot;: &quot;feature/smth&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;feature/destructible&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
     &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
     &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
@@ -139,13 +195,6 @@
     &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
     &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
     &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
-  },
-  &quot;keyToStringList&quot;: {
-    &quot;rider.external.source.directories&quot;: [
-      &quot;C:\\Users\\dmitr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\DecompilerCache&quot;,
-      &quot;C:\\Users\\dmitr\\AppData\\Roaming\\JetBrains\\Rider2023.2\\resharper-host\\SourcesCache&quot;,
-      &quot;C:\\Users\\dmitr\\AppData\\Local\\Symbols\\src&quot;
-    ]
   }
 }</component>
   <component name="Push.Settings">
@@ -227,6 +276,10 @@
       <workItem from="1720275742114" duration="553000" />
       <workItem from="1720882064194" duration="5945000" />
       <workItem from="1720910571839" duration="11038000" />
+      <workItem from="1731495185986" duration="1694000" />
+      <workItem from="1731664886330" duration="692000" />
+      <workItem from="1732476870311" duration="218000" />
+      <workItem from="1732477375391" duration="10452000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
@@ -352,7 +405,14 @@
       <option name="project" value="LOCAL" />
       <updated>1720280839770</updated>
     </task>
-    <option name="localTasksCounter" value="18" />
+    <task id="LOCAL-00018" summary="bug with walls fixed, added destructible behaviours">
+      <created>1722283628358</created>
+      <option name="number" value="00018" />
+      <option name="presentableId" value="LOCAL-00018" />
+      <option name="project" value="LOCAL" />
+      <updated>1722283628358</updated>
+    </task>
+    <option name="localTasksCounter" value="19" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -360,29 +420,13 @@
   </component>
   <component name="UnityCheckinConfiguration" checkUnsavedScenes="true" />
   <component name="UnityProjectConfiguration" hasMinimizedUI="true" />
+  <component name="UnityProjectDiscoverer">
+    <option name="hasUnityReference" value="true" />
+    <option name="unityProject" value="true" />
+    <option name="unityProjectFolder" value="true" />
+  </component>
   <component name="UnityUnitTestConfiguration" currentTestLauncher="EditMode" />
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feature/resistance" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="RECENT_FILTERS">
       <map>
         <entry key="Branch">
@@ -423,6 +467,27 @@
         </entry>
       </map>
     </option>
+    <option name="TAB_STATES">
+      <map>
+        <entry key="MAIN">
+          <value>
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="feature/resistance" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
+          </value>
+        </entry>
+      </map>
+    </option>
   </component>
   <component name="VcsManagerConfiguration">
     <option name="CLEAR_INITIAL_COMMIT_MESSAGE" value="true" />
@@ -442,7 +507,8 @@
     <MESSAGE value="changed octo" />
     <MESSAGE value="added scales" />
     <MESSAGE value="crab with no camera" />
-    <option name="LAST_COMMIT_MESSAGE" value="crab with no camera" />
+    <MESSAGE value="bug with walls fixed, added destructible behaviours" />
+    <option name="LAST_COMMIT_MESSAGE" value="bug with walls fixed, added destructible behaviours" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -450,59 +516,33 @@
         <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs</url>
           <line>238</line>
-          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" initialLine="200" containingFunctionPresentation="method 'Hit'">
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" containingFunctionPresentation="Method 'Shooting'">
             <startOffsets>
-              <option value="8125" />
+              <option value="8603" />
             </startOffsets>
             <endOffsets>
-              <option value="8160" />
+              <option value="8616" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="21" />
         </line-breakpoint>
         <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs</url>
-          <line>242</line>
-          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" initialLine="202" containingFunctionPresentation="method 'Hit'">
-            <startOffsets>
-              <option value="8223" />
-            </startOffsets>
-            <endOffsets>
-              <option value="8253" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="22" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
-          <url>file://$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs</url>
-          <line>208</line>
-          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\PlayerController.cs" initialLine="179" containingFunctionPresentation="method 'Freeze'">
-            <startOffsets>
-              <option value="7467" />
-            </startOffsets>
-            <endOffsets>
-              <option value="7502" />
-            </endOffsets>
-          </properties>
-          <option name="timeStamp" value="28" />
-        </line-breakpoint>
-        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsGeneration/GenerationStrategy.cs</url>
           <line>130</line>
-          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\CoinsGeneration\GenerationStrategy.cs" initialLine="111" containingFunctionPresentation="method 'Apply'">
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\CoinsGeneration\GenerationStrategy.cs" containingFunctionPresentation="Method 'Apply'">
             <startOffsets>
-              <option value="4261" />
+              <option value="4288" />
             </startOffsets>
             <endOffsets>
-              <option value="4298" />
+              <option value="4325" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="38" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs</url>
           <line>18</line>
-          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" initialLine="18" containingFunctionPresentation="method 'Start'">
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" containingFunctionPresentation="method 'Start'">
             <startOffsets>
               <option value="540" />
             </startOffsets>
@@ -512,28 +552,28 @@
           </properties>
           <option name="timeStamp" value="72" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs</url>
-          <line>31</line>
-          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" initialLine="31" containingFunctionPresentation="method 'GenerateObstacles'">
+          <line>30</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" containingFunctionPresentation="method 'GenerateObstacles'">
             <startOffsets>
-              <option value="1142" />
+              <option value="1092" />
             </startOffsets>
             <endOffsets>
-              <option value="1376" />
+              <option value="1326" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="74" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs</url>
-          <line>37</line>
-          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" initialLine="37" containingFunctionPresentation="method 'GenerateObstacles'">
+          <line>36</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Spawn\ObstaclesSpawner.cs" containingFunctionPresentation="method 'GenerateObstacles'">
             <startOffsets>
-              <option value="1389" />
+              <option value="1339" />
             </startOffsets>
             <endOffsets>
-              <option value="1412" />
+              <option value="1362" />
             </endOffsets>
           </properties>
           <option name="timeStamp" value="75" />

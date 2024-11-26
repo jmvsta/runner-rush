@@ -33,13 +33,6 @@ namespace Spawn
             return enemyToActivate;
         }
 
-        // public void KillEnemy(Collider other)
-        // {
-        //     var enemy = other.transform.parent.gameObject.transform.parent.gameObject;
-        //     ExplosionsSpawner.GenerateExplosion(enemy.transform.position, ExplosionsSpawner.ExplosionType.Enemy);
-        //     enemy.SetActive(false);
-        // }
-
         void Update()
         {
             _enemies.FindAll(r => r.activeSelf && r.transform.position.z < -10).ForEach(r => r.SetActive(false));

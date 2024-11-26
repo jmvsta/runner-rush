@@ -11,7 +11,6 @@ namespace Destructible
         [SerializeField] private GameObject _lossPanel;
         [SerializeField] private GameObject _continuePanel;
         [SerializeField] private SpawnController _spawnController;
-        [SerializeField] private EnemiesSpawner _enemiesSpawner;
         [SerializeField] private Text _coinsText;
         [SerializeField] private float _gravity;
         [SerializeField] private float _lineDistanse = 3;
@@ -56,41 +55,36 @@ namespace Destructible
             _jumpAudioSource = GameObject.Find("JumpAudioSource").GetComponent<AudioSource>();
         }
 
+        public override void OnChildTriggerEnter(Collider other, ChildTrigger childTrigger)
+        {
+            throw new NotImplementedException();
+        }
+
         private void Update()
         {
             if (_lossPanel.activeSelf || _continuePanel.activeSelf) return;
 
-            switch (SwipeController.CurrentSwipe)
+            switch (SwipeController.CurrentSwipe, _lineToMove, _characterController.isGrounded, _highJump)
             {
-                case SwipeController.Swipe.SwipeLeft:
-                    if (_lineToMove > 0) _lineToMove--;
+                case (SwipeController.Swipe.SwipeLeft, > 0, _, _):
+                    _lineToMove--;
                     break;
-                case SwipeController.Swipe.SwipeRight:
-                    if (_lineToMove < 2) _lineToMove++;
+                case (SwipeController.Swipe.SwipeRight, < 2, _, _):
+                    _lineToMove++;
                     break;
-                case SwipeController.Swipe.SwipeUp:
-                    if (_characterController.isGrounded)
-                    {
-                        _highJump = true;
-                        Jump(15);
-                    }
-                    else if (_highJump)
-                    {
-                        _highJump = false;
-                        Jump(10);
-                    }
-
+                case (SwipeController.Swipe.SwipeUp, _, true, _):
+                    _highJump = true;
+                    Jump(15);
                     break;
-                case SwipeController.Swipe.SwipeDown:
-                    break;
-                case SwipeController.Swipe.None:
+                case (SwipeController.Swipe.SwipeUp, _, _, true):
+                    _highJump = false;
+                    Jump(10);
                     break;
                 default:
                     if (Input.touchCount > 0 && _characterController.isGrounded && _roadSpawner.Speed >= _cachedSpeed)
                     {
                         Jump(SwipeController.SwipeValue <= 500 ? 15 : 20);
                     }
-
                     break;
             }
 
@@ -139,75 +133,52 @@ namespace Destructible
 
         private void OnTriggerEnter(Collider other)
         {
-            switch (other.gameObject.tag)
+            switch (other.gameObject.tag, _isShield, _live, _isHit)
             {
-                case "Respawn":
+                case ("Respawn", _, _, _):
                     _spawnController.GenerateNext(other);
                     break;
 
-                case "Died":
-                    if (_isShield)
-                    {
-                        // _enemiesSpawner.KillEnemy(other);
-                    }
-                    else if (_live > 0)
-                    {
-                        // _enemiesSpawner.KillEnemy(other);
-                        StartCoroutine(ActivatePanel(_continuePanel));
-                        _live--;
-                        Debug.Log("Died " + _live + " contine pannel active " + _continuePanel.activeSelf);
-                    }
-                    else
-                    {
-                        // _enemiesSpawner.KillEnemy(other);
-                        StartCoroutine(ActivatePanel(_lossPanel));
-                    }
-
+                case ("Died", false, > 0, _):
+                    StartCoroutine(ActivatePanel(_continuePanel));
+                    _live--;
+                    break;
+                
+                case ("Died", false, _, _):
+                    StartCoroutine(ActivatePanel(_lossPanel));
                     break;
 
-                case "Hit":
-                    if (_isShield)
-                    {
-                        other.gameObject.SetActive(false);
-                        break;
-                    }
-
-                    if (_isHit)
-                    {
-                        if (_live > 0)
-                        {
-                            Time.timeScale = 0;
-                            // _enemiesSpawner.KillEnemy(other);
-                            _continuePanel.SetActive(true);
-                            _live--;
-                            Debug.Log("Hit " + _live + " contine pannel active " + _continuePanel.activeSelf);
-                            _isHit = false;
-                            break;
-                        }
-
-                        _lossPanel.SetActive(true);
-                        Time.timeScale = 0;
-                        _isHit = false;
-                        break;
-                    }
-
+                case ("Hit", false, _, _): 
                     _isHit = true;
                     StartCoroutine(Hit(_timeHit));
                     break;
+                
+                case ("Hit", true, > 0, _):
+                    Time.timeScale = 0;
+                    _continuePanel.SetActive(true);
+                    _live--;
+                    _isHit = false;
+                    break;
+                
+                case ("Hit", true, _, _):
+                    _lossPanel.SetActive(true);
+                    Time.timeScale = 0;
+                    _isHit = false;
+                    break;
 
-                case "Coin":
+                case ("Coin", _, _, _):
                     _coins++;
                     _coinsText.text = _coins.ToString();
                     other.gameObject.SetActive(false);
                     break;
 
-                case "Shield":
+                case ("Shield", _, _, _):
                     other.gameObject.SetActive(false);
                     _isShield = true;
                     StartCoroutine(Shielded(_timeShield));
                     break;
 
-                case "Shooting":
+                case ("Shooting", _, _, _):
                     other.gameObject.SetActive(false);
                     StartCoroutine(Shooting(_timeShooting));
                     break;
