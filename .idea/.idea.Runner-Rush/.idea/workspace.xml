@@ -5,72 +5,32 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/ChildTrigger.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/ChildTrigger.cs.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Coin.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Coin.cs.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/projectSettingsUpdater.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/projectSettingsUpdater.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/psyhoSky.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Materials/psyhoSky.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Mandelbrot_full_gradient.gif" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Mandelbrot_full_gradient.gif.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/BLACK_PLSTC.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/BLACK_PLSTC.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material #9.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material #9.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material White.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material White.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material metalic black.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material metalic black.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material metalic red.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material metalic red.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.001.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.001.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.002.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.002.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.004.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.004.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.005.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.005.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/Material.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/PINK_PLSTC.mat" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/Materials/PINK_PLSTC.mat.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.blend1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.blend1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/caplsule.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.blend1" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.blend1.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.fbx" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/newOcto.fbx.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/newOctoB.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/newOctoB.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/octo_blend.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/octo_blend.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/право.jpg" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/право.jpg.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Coin.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Hit.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Obstacles/Hit.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/PlaneRoad1.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pill_gv.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pill_gv.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Died.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Died.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Died.mask" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Died.mask.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/HitPlayer.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/HitPlayer.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MoveLegs.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MoveLegs.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Player.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shielded.mask" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shielded.mask.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/ShieldedPlayer.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/ShieldedPlayer.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shooting.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shooting.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shooting.mask" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Shooting.mask.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/StartHit.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/StartHit.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/StartShield.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/StartShield.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/StartShooting.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/StartShooting.anim.meta" beforeDir="false" />
       <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Bullet.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Bullet.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Destructible.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Wall.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/CoinsSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/EnemiesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/EnemiesSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/ExplosionsSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/ExplosionsSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/ObstaclesSpawner.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -131,6 +91,10 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d303c2bf72cd4cec95665b89c457d265d2b8ef3ed6da17cd4f85587c2f9de7/System.Linq.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Materials/psyhoSky.mat.meta" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/Destructible/Bullet.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/Destructible/Destructible.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/Destructible/Player.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/Spawn/CoinsSpawner.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ai.navigation@1.1.4/Editor/ConversionSystem/SystemConvertersEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.rider@3.0.24/Rider/Editor/RiderScriptEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
@@ -279,7 +243,8 @@
       <workItem from="1731495185986" duration="1694000" />
       <workItem from="1731664886330" duration="692000" />
       <workItem from="1732476870311" duration="218000" />
-      <workItem from="1732477375391" duration="10452000" />
+      <workItem from="1732477375391" duration="10691000" />
+      <workItem from="1732794816099" duration="157000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
@@ -412,7 +377,15 @@
       <option name="project" value="LOCAL" />
       <updated>1722283628358</updated>
     </task>
-    <option name="localTasksCounter" value="19" />
+    <task id="LOCAL-00019" summary="Models refactoring, fractal background, goose or swan prefab, octo model with bones">
+      <option name="closed" value="true" />
+      <created>1732647572912</created>
+      <option name="number" value="00019" />
+      <option name="presentableId" value="LOCAL-00019" />
+      <option name="project" value="LOCAL" />
+      <updated>1732647572912</updated>
+    </task>
+    <option name="localTasksCounter" value="20" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -471,19 +444,7 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="feature/resistance" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
+            <State />
           </value>
         </entry>
       </map>
@@ -508,7 +469,8 @@
     <MESSAGE value="added scales" />
     <MESSAGE value="crab with no camera" />
     <MESSAGE value="bug with walls fixed, added destructible behaviours" />
-    <option name="LAST_COMMIT_MESSAGE" value="bug with walls fixed, added destructible behaviours" />
+    <MESSAGE value="Models refactoring, fractal background, goose or swan prefab, octo model with bones" />
+    <option name="LAST_COMMIT_MESSAGE" value="Models refactoring, fractal background, goose or swan prefab, octo model with bones" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
