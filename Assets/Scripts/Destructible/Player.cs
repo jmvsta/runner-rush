@@ -148,19 +148,19 @@ namespace Destructible
                     StartCoroutine(ActivatePanel(_lossPanel));
                     break;
 
-                case ("Hit", false, _, _): 
+                case ("Hit", false, _, false): 
                     _isHit = true;
                     StartCoroutine(Hit(_timeHit));
                     break;
                 
-                case ("Hit", true, > 0, _):
+                case ("Hit", false, > 0, true):
                     Time.timeScale = 0;
                     _continuePanel.SetActive(true);
                     _live--;
                     _isHit = false;
                     break;
                 
-                case ("Hit", true, _, _):
+                case ("Hit", false, 0, true):
                     _lossPanel.SetActive(true);
                     Time.timeScale = 0;
                     _isHit = false;

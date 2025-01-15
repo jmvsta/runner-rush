@@ -12,6 +12,6 @@ public class Move : MonoBehaviour
 
     private void FixedUpdate()
     {
-        transform.Translate(-transform.forward * _roadSpawner.Speed * Time.deltaTime);
+        transform.Translate(-transform.forward * _roadSpawner.Speed * Time.fixedDeltaTime);
     }
 }
