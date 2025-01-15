@@ -1652,7 +1652,7 @@ MonoBehaviour:
   - {fileID: 254297243477746020, guid: f9108fc3edb1721449a48f75b8972bca, type: 3}
   _asylumPrefabs:
   - {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
-  _speed: 70.7
+  _speed: 70
   _scoreText: {fileID: 1670773816}
   _roadLength: 200
   _maxRoads: 10
@@ -4032,7 +4032,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 1821749268001481402, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: m_Enabled
-      value: 1
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 1821749268001481402, guid: 8135e4beee7d17a4c837fdccb0ab4bb6, type: 3}
       propertyPath: m_Center.y
