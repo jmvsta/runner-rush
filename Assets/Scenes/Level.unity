@@ -26,7 +26,7 @@ RenderSettings:
   m_AmbientIntensity: 1
   m_AmbientMode: 3
   m_SubtractiveShadowColor: {r: 0.764151, g: 0.28475437, b: 0.28475437, a: 1}
-  m_SkyboxMaterial: {fileID: 2100000, guid: 3d62a2dca270045468589aff6743e6e1, type: 2}
+  m_SkyboxMaterial: {fileID: 2100000, guid: e002c521dd1d9ce4fa798e0769be75d9, type: 2}
   m_HaloStrength: 0.5
   m_FlareStrength: 1
   m_FlareFadeSpeed: 3
@@ -38,7 +38,6 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.29171845, g: 0.085395716, b: 0.8576842, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1652,7 +1651,7 @@ MonoBehaviour:
   - {fileID: 254297243477746020, guid: f9108fc3edb1721449a48f75b8972bca, type: 3}
   _asylumPrefabs:
   - {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
-  _speed: 70
+  _speed: 40
   _scoreText: {fileID: 1670773816}
   _roadLength: 200
   _maxRoads: 10

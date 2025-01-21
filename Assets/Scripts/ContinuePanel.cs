@@ -1,9 +1,16 @@
+using Destructible;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class ContinuePanel : MonoBehaviour
 {
     [SerializeField] private GameObject _continuePanel;
+    private PlayerController _player;
+
+    void Start()
+    {
+        _player = GameObject.Find("Player").GetComponent<PlayerController>();
+    }
 
     public void Died()
     {
@@ -14,6 +21,7 @@ public class ContinuePanel : MonoBehaviour
 
     public void Continue()
     {
+        StartCoroutine(_player.Shielded(3f));
         Time.timeScale = 1;
         _continuePanel.SetActive(false);
     }

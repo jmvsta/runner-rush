@@ -14,6 +14,7 @@ namespace Destructible
                     gameObject.SetActive(false);
                     break;
                 case "Hit":
+                    break;
                 default:
                     break;
             }
