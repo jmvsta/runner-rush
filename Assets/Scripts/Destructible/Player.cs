@@ -80,12 +80,6 @@ namespace Destructible
                     _highJump = false;
                     Jump(10);
                     break;
-                default:
-                    if (Input.touchCount > 0 && _characterController.isGrounded && _roadSpawner.Speed >= _cachedSpeed)
-                    {
-                        Jump(SwipeController.SwipeValue <= 500 ? 15 : 20);
-                    }
-                    break;
             }
 
             Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
