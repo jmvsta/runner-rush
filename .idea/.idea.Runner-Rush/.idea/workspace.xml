@@ -4,23 +4,25 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="">
+    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="added crab model and prefab, edited behavior on crushing into objects - 3 sec of protection after; upgrade unity">
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour.meta" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour/MoveObjectX.cs" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour/MoveObjectX.cs.meta" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/mec_crab_1.blend" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/mec_crab_1.blend.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/octo.blend.meta" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/octo.blend.meta" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Player.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/pill_gv.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/pill_gv.prefab" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/ContinuePanel.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/ContinuePanel.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Shooting.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Shooting.cs" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/manifest.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/manifest.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Packages/packages-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/Packages/packages-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/Packages/com.unity.probuilder/Settings.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" beforeDir="false" afterPath="$PROJECT_DIR$/ProjectSettings/ProjectVersion.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Coin.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Coin.anim" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MecCrab.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/MecCrab.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SkyAnimation.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SkyAnimation.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Swan.controller" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/Swan.controller.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwanWings.anim" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwanWings.anim.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Models/EnemyCrab.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/EnemyCrab.blend" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BossSwan.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BossSwan.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab.meta" beforeDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -72,6 +74,10 @@
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/../../../../Program Files/Unity/Hub/Editor/2022.3.8f1/Editor/Data/CGIncludes/UnityShaderVariables.cginc" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Roaming/JetBrains/Rider2022.1/resharper-host/DecompilerCache/decompiler/10871f9e312b442cb78b9b97db88fdcb172a00/c5/4af3bbc2/Random.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$USER_HOME$/AppData/Roaming/JetBrains/Rider2022.1/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
@@ -97,6 +103,7 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ed3dae649e648f7a159faaaa24538931fe00/2e/91a309b0/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ed3dae649e648f7a159faaaa24538931fe00/99/da2366e6/Collider.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2ed3dae649e648f7a159faaaa24538931fe00/ff/a07f4abd/CharacterController.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/2f488eb4164e4cc6be27a867ab1e541327800/2c/727ee01b/Animator.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5243aba1830e4953bd0b895413190d0b3c00/a2/dd09a6b1/NativeInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5243aba1830e4953bd0b895413190d0b3c00/aa/f841f23c/NativeInputSystem.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/5a41d6b7189842eca409fd0b1c3e3dcf17bf78/28/b279140c/IEnumerable`1.cs" root0="SKIP_HIGHLIGHTING" />
@@ -119,11 +126,13 @@
     <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/ContinuePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/ContinuePanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/ContinuePanel.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour/MoveObjectX.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/Destructible/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/Destructible/Player.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock://C:/Users/dmitr/UnityProjects/Runner-Rush/Assets/Scripts/LossPanel.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.animation.rigging@1.2.1/Editor/AnimationRig/Constraints/BlendConstraintEditor.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ide.vscode@1.2.5/Editor/ProjectGeneration/ProjectGeneration.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.6/Tests/Tests/Shared/TestQuaternion.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.6/Tests/Tests/TestRandom.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.mathematics@1.2.6/Unity.Mathematics/half.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$PROJECT_DIR$/Library/PackageCache/com.unity.ugui@1.0.0/Editor/UI/AspectRatioFitterEditor.cs" root0="SKIP_HIGHLIGHTING" />
@@ -280,7 +289,7 @@
       <workItem from="1732794816099" duration="1167000" />
       <workItem from="1736951679624" duration="14091000" />
       <workItem from="1737405530817" duration="646000" />
-      <workItem from="1737465582974" duration="14470000" />
+      <workItem from="1737465582974" duration="21241000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
@@ -429,7 +438,15 @@
       <option name="project" value="LOCAL" />
       <updated>1732794995883</updated>
     </task>
-    <option name="localTasksCounter" value="21" />
+    <task id="LOCAL-00021" summary="added crab model and prefab, edited behavior on crushing into objects - 3 sec of protection after; upgrade unity">
+      <option name="closed" value="true" />
+      <created>1737484276022</created>
+      <option name="number" value="00021" />
+      <option name="presentableId" value="LOCAL-00021" />
+      <option name="project" value="LOCAL" />
+      <updated>1737484276023</updated>
+    </task>
+    <option name="localTasksCounter" value="22" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -515,7 +532,8 @@
     <MESSAGE value="bug with walls fixed, added destructible behaviours" />
     <MESSAGE value="Models refactoring, fractal background, goose or swan prefab, octo model with bones" />
     <MESSAGE value="Max refactoring. Main character with bones and animation, sky. TODO: rust material export from blender" />
-    <option name="LAST_COMMIT_MESSAGE" value="Max refactoring. Main character with bones and animation, sky. TODO: rust material export from blender" />
+    <MESSAGE value="added crab model and prefab, edited behavior on crushing into objects - 3 sec of protection after; upgrade unity" />
+    <option name="LAST_COMMIT_MESSAGE" value="added crab model and prefab, edited behavior on crushing into objects - 3 sec of protection after; upgrade unity" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -611,7 +629,7 @@
           </properties>
           <option name="timeStamp" value="80" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Destructible/Player.cs</url>
           <line>135</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Destructible\Player.cs" containingFunctionPresentation="Method 'OnTriggerEnter'">
@@ -623,6 +641,19 @@
             </endOffsets>
           </properties>
           <option name="timeStamp" value="87" />
+        </line-breakpoint>
+        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+          <url>file://$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour/MoveObjectX.cs</url>
+          <line>13</line>
+          <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Destructible\Behaviour\MoveObjectX.cs" containingFunctionPresentation="Method 'Update'">
+            <startOffsets>
+              <option value="307" />
+            </startOffsets>
+            <endOffsets>
+              <option value="337" />
+            </endOffsets>
+          </properties>
+          <option name="timeStamp" value="88" />
         </line-breakpoint>
       </breakpoints>
     </breakpoint-manager>
