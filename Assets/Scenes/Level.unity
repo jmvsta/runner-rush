@@ -1651,7 +1651,7 @@ MonoBehaviour:
   - {fileID: 254297243477746020, guid: f9108fc3edb1721449a48f75b8972bca, type: 3}
   _asylumPrefabs:
   - {fileID: 6659327853648236370, guid: 7b51a07b38c985646811d6a2c94959ec, type: 3}
-  _speed: 40
+  _speed: 20
   _scoreText: {fileID: 1670773816}
   _roadLength: 200
   _maxRoads: 10

@@ -4,25 +4,16 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="added crab model and prefab, edited behavior on crushing into objects - 3 sec of protection after; upgrade unity">
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour.meta" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour/MoveObjectX.cs" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour/MoveObjectX.cs.meta" afterDir="false" />
+    <list default="true" id="8327ea25-0a40-411c-a606-25bbd6a44f7e" name="Changes" comment="">
       <change beforePath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/.idea.Runner-Rush/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Coin.anim" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Animations/Coin.anim" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/MecCrab.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/MecCrab.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/SkyAnimation.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/SkyAnimation.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Swan.controller" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/Swan.controller.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwanWings.anim" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Animations/SwanWings.anim.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Models/EnemyCrab.blend" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Models/EnemyCrab.blend" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BossSwan.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/BossSwan.prefab.meta" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/MecCrab.prefab.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/4-Audio 0002 [2024-07-14 122435].wav" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Audio/4-Audio 0002 [2024-07-14 122435].wav.meta" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyCrab.prefab" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Prefabs/Enemies/EnemyCrab.prefab" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scenes/Level.unity" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scenes/Level.unity" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Destructible.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Destructible.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Enemy.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Destructible/Wall.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Destructible/Wall.cs" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Assets/Scripts/Spawn/EnemiesSpawner.cs" beforeDir="false" afterPath="$PROJECT_DIR$/Assets/Scripts/Spawn/EnemiesSpawner.cs" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -54,6 +45,13 @@
     </option>
   </component>
   <component name="HighlightingSettingsPerFile">
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
+    <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="mock:///Dummy.cs" root0="SKIP_HIGHLIGHTING" />
@@ -114,9 +112,13 @@
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/88/54c39a50/ThrowHelper.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/b89873cb176e44a995a4781c7487d41046ac00/9d/c06ef30d/List`1.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3dca0e61d5249b79ac00f7b2c7a01ef176e00/49/4debf8db/MonoBehaviour.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3dca0e61d5249b79ac00f7b2c7a01ef176e00/7b/35be2d83/Vector3.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3dca0e61d5249b79ac00f7b2c7a01ef176e00/95/67affef2/RectTransform.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3dca0e61d5249b79ac00f7b2c7a01ef176e00/bb/f4c55e65/Transform.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c3dca0e61d5249b79ac00f7b2c7a01ef176e00/c2/69ccc691/GameObject.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/c59776c7288c4419a69765991b1062633c00/99/9b5e22bf/NativeInputSystem.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/de920293e401402ab375ad8a2e1b19da46ac00/6b/da88b4dc/NullReferenceException.cs" root0="FORCE_HIGHLIGHTING" />
+    <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/DecompilerCache/decompiler/f32c7d03b25440e2b36f4feb70bf309c10400/dd/1bdc577c/AudioSource.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/3ea01e77be99618395f448b16bd7cc2bd4248bd9e5d8474964b2d97f39c5d74/System.cs" root0="FORCE_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/7d303c2bf72cd4cec95665b89c457d265d2b8ef3ed6da17cd4f85587c2f9de7/System.Linq.cs" root0="SKIP_HIGHLIGHTING" />
     <setting file="file://$APPLICATION_CONFIG_DIR$/resharper-host/SourcesCache/d44b17e136d09081da1e8fd0e8c83fde60e11818b9f2442d7ed8cb733fae895e/System.Collections.Generic.cs" root0="SKIP_HIGHLIGHTING" />
@@ -183,26 +185,26 @@
     <option name="hideEmptyMiddlePackages" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
-  <component name="PropertiesComponent"><![CDATA[{
-  "keyToString": {
-    "Attach to Unity Editor.Attach to Unity Editor.executor": "Debug",
-    "Discover.Launch.Via.Unity": "true",
-    "RunOnceActivity.OpenProjectViewOnStart": "true",
-    "RunOnceActivity.ShowReadmeOnStart": "true",
-    "WebServerToolWindowFactoryState": "false",
-    "XThreadsFramesViewSplitterKey": "0.4945946",
-    "git-widget-placeholder": "models/crab",
-    "ignore.virus.scanning.warn.message": "true",
-    "node.js.detected.package.eslint": "true",
-    "node.js.detected.package.tslint": "true",
-    "node.js.selected.package.eslint": "(autodetect)",
-    "node.js.selected.package.tslint": "(autodetect)",
-    "nodejs_package_manager_path": "npm",
-    "rider.run.widget.enabled.cache": "false",
-    "settings.editor.selected.configurable": "preferences.lookFeel",
-    "vue.rearranger.settings.migration": "true"
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Attach to Unity Editor.Attach to Unity Editor.executor&quot;: &quot;Debug&quot;,
+    &quot;Discover.Launch.Via.Unity&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.OpenProjectViewOnStart&quot;: &quot;true&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;WebServerToolWindowFactoryState&quot;: &quot;false&quot;,
+    &quot;XThreadsFramesViewSplitterKey&quot;: &quot;0.4945946&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;models/crab&quot;,
+    &quot;ignore.virus.scanning.warn.message&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;rider.run.widget.enabled.cache&quot;: &quot;false&quot;,
+    &quot;settings.editor.selected.configurable&quot;: &quot;preferences.lookFeel&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
   }
-}]]></component>
+}</component>
   <component name="Push.Settings">
     <force-push-targets>
       <force-push-target remote-path="origin" branch="bugfix/roadgen" />
@@ -243,10 +245,10 @@
       </option>
       <method v="2" />
     </configuration>
-    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost" ignored-value-for-modified-check="14580">
+    <configuration name="Attach to Unity Editor" type="UNITY_DEBUG_RUN_CONFIGURATION" factoryName="Unity Debug" show_console_on_std_err="false" show_console_on_std_out="false" port="50000" address="localhost">
       <option name="allowRunningInParallel" value="false" />
       <option name="listenPortForConnections" value="false" />
-      <option name="pid" value="14580" />
+      <option name="pid" />
       <option name="projectPathOnTarget" />
       <option name="selectedOptions">
         <list />
@@ -289,7 +291,7 @@
       <workItem from="1732794816099" duration="1167000" />
       <workItem from="1736951679624" duration="14091000" />
       <workItem from="1737405530817" duration="646000" />
-      <workItem from="1737465582974" duration="21241000" />
+      <workItem from="1737465582974" duration="27837000" />
     </task>
     <task id="LOCAL-00001" summary="fixed road generation, made 2 lists for disabled and enabled roads storage, search RoadSpawner in MoveRoad only on initialization">
       <option name="closed" value="true" />
@@ -446,7 +448,15 @@
       <option name="project" value="LOCAL" />
       <updated>1737484276023</updated>
     </task>
-    <option name="localTasksCounter" value="22" />
+    <task id="LOCAL-00022" summary="added animation and random movement of crab">
+      <option name="closed" value="true" />
+      <created>1737509941598</created>
+      <option name="number" value="00022" />
+      <option name="presentableId" value="LOCAL-00022" />
+      <option name="project" value="LOCAL" />
+      <updated>1737509941598</updated>
+    </task>
+    <option name="localTasksCounter" value="23" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -533,7 +543,8 @@
     <MESSAGE value="Models refactoring, fractal background, goose or swan prefab, octo model with bones" />
     <MESSAGE value="Max refactoring. Main character with bones and animation, sky. TODO: rust material export from blender" />
     <MESSAGE value="added crab model and prefab, edited behavior on crushing into objects - 3 sec of protection after; upgrade unity" />
-    <option name="LAST_COMMIT_MESSAGE" value="added crab model and prefab, edited behavior on crushing into objects - 3 sec of protection after; upgrade unity" />
+    <MESSAGE value="added animation and random movement of crab" />
+    <option name="LAST_COMMIT_MESSAGE" value="added animation and random movement of crab" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
@@ -642,7 +653,7 @@
           </properties>
           <option name="timeStamp" value="87" />
         </line-breakpoint>
-        <line-breakpoint enabled="true" type="DotNet Breakpoints">
+        <line-breakpoint type="DotNet Breakpoints">
           <url>file://$PROJECT_DIR$/Assets/Scripts/Destructible/Behaviour/MoveObjectX.cs</url>
           <line>13</line>
           <properties documentPath="C:\Users\dmitr\UnityProjects\Runner-Rush\Assets\Scripts\Destructible\Behaviour\MoveObjectX.cs" containingFunctionPresentation="Method 'Update'">
