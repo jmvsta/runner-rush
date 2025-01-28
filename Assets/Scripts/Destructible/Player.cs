@@ -83,12 +83,6 @@ namespace Destructible
                     _highJump = false;
                     Jump(10);
                     break;
-                default:
-                    if (Input.touchCount > 0 && _characterController.isGrounded && _roadSpawner.Speed >= _cachedSpeed)
-                    {
-                        Jump(SwipeController.SwipeValue <= 500 ? 15 : 20);
-                    }
-                    break;
             }
 
             Vector3 targetPosition = transform.position.z * transform.forward + transform.position.y * transform.up;
@@ -107,7 +101,7 @@ namespace Destructible
             }
 
             Vector3 dif = targetPosition - transform.position;
-            Vector3 moveDir = dif.normalized * 25 * Time.deltaTime;
+            Vector3 moveDir = dif.normalized * (25 * Time.deltaTime);
             _characterController.Move(moveDir.sqrMagnitude > dif.sqrMagnitude ? moveDir : dif);
         }
 
@@ -157,15 +151,13 @@ namespace Destructible
                     break;
                 
                 case ("Hit", false, > 0, true):
-                    Time.timeScale = 0;
-                    _continuePanel.SetActive(true);
+                    StartCoroutine(ActivatePanel(_continuePanel));
                     _live--;
                     _isHit = false;
                     break;
                 
                 case ("Hit", false, 0, true):
-                    _lossPanel.SetActive(true);
-                    Time.timeScale = 0;
+                    StartCoroutine(ActivatePanel(_continuePanel));
                     _isHit = false;
                     break;
 
@@ -177,7 +169,6 @@ namespace Destructible
 
                 case ("Shield", _, _, _):
                     other.gameObject.SetActive(false);
-                    _isShield = true;
                     StartCoroutine(Shielded(_timeShield));
                     break;
 
@@ -190,6 +181,7 @@ namespace Destructible
 
         private IEnumerator ActivatePanel(GameObject panel)
         {
+            _isShield = true;
             yield return new WaitForSeconds(0.3f);
             panel.SetActive(true);
             Time.timeScale = 0;
@@ -223,8 +215,9 @@ namespace Destructible
             _skyController.SetNormalSky();
         }
 
-        IEnumerator Shielded(float time)
+        public IEnumerator Shielded(float time)
         {
+            _isShield = true;
             _animator.SetTrigger(StartShielded);
 
             yield return new WaitForSeconds(time - 2f);

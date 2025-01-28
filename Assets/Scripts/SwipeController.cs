@@ -5,7 +5,6 @@ public class SwipeController : MonoBehaviour
     private bool _isDragging;
     private Vector2 _startTouch, _swipeDelta;
     public static Swipe CurrentSwipe = Swipe.None;
-    public static int SwipeValue;
 
     public enum Swipe
     {
@@ -58,7 +57,7 @@ public class SwipeController : MonoBehaviour
         _swipeDelta = Vector2.zero;
         if (_isDragging)
         {
-            if (Input.touches.Length < 0)
+            if (Input.touches.Length > 0)
                 _swipeDelta = Input.touches[0].position - _startTouch;
             else if (Input.GetMouseButton(0))
                 _swipeDelta = (Vector2)Input.mousePosition - _startTouch;
