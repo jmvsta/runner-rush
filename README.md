@@ -7,7 +7,7 @@ You can collect coins. Summary score is counted according to the traveled distan
 
 <h2>Releases</h2>
 Releases can be found here: [releases](https://github.com/ADZharikova/Runner-Rush/releases)
-</br>Latest version: [latest](https://github.com/ADZharikova/Runner-Rush/releases/tag/v1.0.1)
+</br>Latest version: [latest](https://github.com/ADZharikova/Runner-Rush/releases/tag/v1.1.0)
 
 <h2>Technical Details</h2>
 The latest version of this project was written in C# using Unity 2022.3.8f1.
